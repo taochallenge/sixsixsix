@@ -4,3 +4,64 @@
 * @Last Modified by:   taochallenge
 * @Last Modified time: 2019-12-17 18:17:42
 */
+#big-box{
+	width: 1200px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+#login{
+	width: 1200px;
+	height: 30px;
+	background-color: #f5f4f4;
+	border: 1px solid #ccc;
+	line-height: 30px;
+}
+#left_1{
+	width: 300px;
+	margin-left: 50px;
+	float: left;
+	line-height: 30px;
+}
+#login>ul{
+	width: 700px;
+	float: right;
+	margin-top: 0;
+}
+#list_1{
+	display: inline-block;
+	line-height: 30px;
+	margin-left: 20px;
+	float: left;
+}
+select{
+	border:0;
+	background-color: #f5f4f4;
+}
+#nav{
+	width: 1200px;
+	height: 100px;
+}
+#logo{
+	float: left;
+	margin-top: 20px;
+}
+#word{
+	float: left;
+	width: 200px;
+}
+#search>input{
+	width: 400px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 100px;
+	border: 2px solid #f3f2f2;
+	float: left;
+}
+#search>button{
+	height: 30px;
+	width: 50px;
+	margin-left: 0;
+	margin-top: 20px;
+	background-color: #f3f2f2;
+	float: left;
+}
