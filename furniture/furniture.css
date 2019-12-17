@@ -4,3 +4,144 @@
 * @Last Modified by:   taochallenge
 * @Last Modified time: 2019-12-17 18:14:13
 */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.code img{
+	float: right;
+	width: 120px;
+	height: 120px;
+	position: fixed;
+	top: 200px;
+	right:5px;
+}
+#homenav{
+	float: left;
+	width: 200px;
+	height: 670px;
+	border: 1px solid yellow;
+	background-color: #9ff;
+	margin-left: 140px;
+}
+#homenav span{
+	font-size: 14px;
+	color: #eee;
+	line-height: 30px;
+}
+#homenav img{
+	padding-top: 10px;
+	padding-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+.home_first{
+	margin-left: 10px;
+	width: 180px;
+	height: 90px;
+	font-size: 12px;
+	line-height: 14px;
+	border-bottom: 1px solid #abdcfe; 
+}
+.ha{
+	float: left;
+	margin:0 5px;
+	text-align: center;
+	line-height: 20px;
+}
+.title{
+	height: 29px;
+	width: 200px;
+	line-height: 29px;
+	border-bottom: 1px solid #d2d2d2;
+	background-color: #9f6633;
+	text-align: center;
+	color: #fff;
+}
+#box{
+	width: 1000px;
+	height: 300px;
+	margin-left:350px;
+	margin-top: 200px;
+	position: relative;
+	overflow: hidden;
+}
+.box:hover #left{
+	display: block;
+}
+.box:hover #right{
+	display: block;
+}
+.slider{
+	width: 8000px;
+	position: absolute;
+	left: -1000px;
+}
+.slide{
+	width: 1000px;
+	overflow: hidden;
+	float: left;
+}
+.slide img{
+	width: 1000px;
+	height: 300px;
+	align:center;
+}
+.box>span{
+	display: block;
+	width: 30px;
+	height: 45px;
+	text-align: center;
+	cursor: pointer;
+	top: 130px;
+	position: absolute;
+	opacity: 0;
+}
+#left{
+	position: absolute;
+	left: 30px;
+	bottom: 160px;
+	background-color:blue;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	opacity: 0.5;
+	display: none;
+}
+#right{
+	position: absolute;
+	right: 30px;
+	bottom: 160px;
+	background-color:blue;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	opacity: 0.5;
+	display:none;
+}
+.nav{
+	position: absolute;
+	left: 750px;
+	bottom: 10px;
+}
+.nav>li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background-color: #f9f;
+	cursor: pointer;
+	margin:0 5px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 13px; 	
+}
+.nav .active{
+	background:red;
+}
+

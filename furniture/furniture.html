@@ -3,8 +3,179 @@
 <head>
 	<meta charset="UTF-8">
 	<title>当当网家居馆</title>
+	<link rel="stylesheet" type="text/css" href="furniture.css">
 </head>
 <body>
-	
+	<div id="homenav">
+		<div class="title">家居家纺导购</a></div>
+		<div class="home_first">
+			<span><img src="images/hand.jpg"><a href="#">家纺</a></span><br>
+			<a href="#" class="ha">床品件套</a>
+			<a href="#" class="ha">被子</a>
+			<a href="#" class="ha">枕芯枕套</a>
+			<a href="#" class="ha">床品散件</a>
+			<a href="#" class="ha">沙发垫/靠垫</a>
+			<a href="#" class="ha">毛巾</a>
+		</div>
+		<div class="home_first">
+			<span><img src="images/hand.jpg"><a href="#">厨具</a></span><br>
+			<a href="#" class="ha">水具</a>
+			<a href="#" class="ha">茶具</a>
+			<a href="#" class="ha">餐具</a>
+			<a href="#" class="ha">保鲜盒</a>
+			<a href="#" class="ha">炒锅</a>
+			<a href="#" class="ha">煎锅</a>
+			<a href="#" class="ha">蒸锅</a>
+			<a href="#" class="ha">压力锅</a>
+		</div>
+		<div class="home_first">
+			<span><img src="images/hand.jpg"><a href="#">清洁护理</a></span><br>
+			<a href="#" class="ha">卫浴用品</a>
+			<a href="#" class="ha">垃圾收纳</a>
+			<a href="#" class="ha">清洁工具</a>
+			<a href="#" class="ha">暖宝宝</a>
+			<a href="#" class="ha">皮革地板护理</a>
+		</div>
+		<div class="home_first">
+			<span><img src="images/hand.jpg"><a href="#">家局日用</a></span><br>
+			<a href="#" class="ha">整理箱收纳盒</a>
+			<a href="#" class="ha">压缩袋防尘罩</a>
+			<a href="#" class="ha">衣架烫衣板</a>
+			<a href="#" class="ha">置物架/篮</a>
+		</div>
+		<div class="home_first">
+			<span><img src="images/hand.jpg"><a href="#">家具</a></span><br>
+			<a href="#" class="ha">客厅家具</a>
+			<a href="#" class="ha">卧室家具</a>
+			<a href="#" class="ha">书房家具</a>
+			<a href="#" class="ha">储物家具</a>
+			<a href="#" class="ha">儿童家具</a>
+			<a href="#" class="ha">餐厅家具</a>
+		</div>
+		<div class="home_first">
+			<span><img src="images/hand.jpg"><a href="#">家装建材</a></span><br>
+			<a href="#" class="ha">灯具照明</a>
+			<a href="#" class="ha">厨房卫浴</a>
+			<a href="#" class="ha">电工电料</a>
+			<a href="#" class="ha">墙地面材</a>
+			<a href="#" class="ha">五金工具</a>
+			<a href="#" class="ha">安全防护</a>
+		</div>
+		<div class="home_first">
+			<span><img src="images/hand.jpg"><a href="#">宠物</a></span><br>
+			<a href="#" class="ha">宠物用品</a>
+			<a href="#" class="ha">宠物美容</a>
+			<a href="#" class="ha">宠物清洁</a>
+			<a href="#" class="ha">宠物食具</a>
+			<a href="#" class="ha">宠物牵引</a>
+			<a href="#" class="ha">宠物玩具</a>
+		</div>
+	</div>
+	<div id="box" class="box">
+		<div class="slider" id="slider">
+			<div class="slide"><img src="images/image8.jpg" alt=""></div>	 
+		 	<div class="slide"><img src="images/image1.jpg" alt=""></div>
+		 	<div class="slide"><img src="images/image2.jpg" alt=""></div>
+			<div class="slide"><img src="images/image3.jpg" alt=""></div>
+			<div class="slide"><img src="images/image4.jpg" alt=""></div>
+			<div class="slide"><img src="images/image5.jpg" alt=""></div>	
+			<div class="slide"><img src="images/image6.jpg" alt=""></div>
+			<div class="slide"><img src="images/image7.jpg" alt=""></div>
+			<div class="slide"><img src="images/image8.jpg" alt=""></div>
+			<div class="slide"><img src="images/image1.jpg" alt=""></div>
+		</div>
+		<span id="left"><</span>
+		<span id="right">></span>
+		<ul class="nav" id="nav">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+	</div>
+	<div class="code">
+		<img src="images/erweima.jpg">
+	</div>
 </body>
+<script type="text/javascript" src= "furniture.js"></script>
+<script type="text/javascript">
+	var box = document.getElementById('box');
+	var oNavlist = document.getElementById('nav').children;
+	var slider = document.getElementById("slider");
+	var left = document.getElementById("left");
+	var right = document.getElementById("right");
+	var index = 1;
+	var timer;
+	var isMoving = false;
+
+	for(var i=0;i<oNavlist.length;++i){
+		oNavlist[i].index=i;
+		oNavlist[i].onclick = function(){
+			index = this.index+1;
+			navmove();
+			animate(slider,{left:-1000*index});
+		}
+	}
+	function next(){
+		if(isMoving){
+			return;
+		}
+		isMoving=true;
+		index++;
+		navmove();
+		animate(slider,{left:-1000*index},function(){
+			if (index==9) {
+				slider.style.left = "-1000px";
+				index=1;
+			}
+			isMoving = false;
+		});
+	}
+	function navmove(){
+		for(var i =0;i<oNavlist.length;++i){
+			oNavlist[i].className = "";
+		}
+		if(index>8){
+			oNavlist[0].className = "active";
+		}
+		else if(index<=0){
+			oNavlist[7].className = "active";
+		}
+		else{
+			oNavlist[index-1].className="active";
+		}
+	}
+	box.onmouseover = function(){
+		animate(left,{opacity:50});
+		animate(right,{opacity:50});
+		clearInterval(timer);
+	}
+	box.onmouseout = function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});
+		timer = setInterval(next,3000);
+	}
+	right.onclick = next;
+	left.onclick = function(){
+		if(isMoving){
+			return;
+		}
+		isMoving =true;
+		index--;
+		navmove();
+		animate(slider,{left:-1000*index},function(){
+			if(index==0){
+				slider.style.left="-8000px";
+				index=8;
+			}
+			isMoving = false;
+		})
+	}
+	timer = setInterval(next,3000);
+</script>
+</script>
 </html>
