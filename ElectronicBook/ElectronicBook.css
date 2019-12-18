@@ -37,7 +37,7 @@ select{
 	border:0;
 	background-color: #f5f4f4;
 }
-#nav{
+#navs{
 	width: 1200px;
 	height: 100px;
 }
@@ -133,4 +133,150 @@ select{
 }
 #right_2{
 	float: right;
+}
+#box_left{
+	width: 250px;
+	height: 930px;
+	float: left;
+}
+#left_3{
+	width: 250px;
+	height: 100px;
+	background-color: #ccc;
+	float: left;
+}
+#left_4{
+	width: 250px;
+	height: 100px;
+	background-color: #ddd;
+	float: left;
+}
+#more{
+	width: 250px;
+	height: 30px;
+	float: left;
+	background-color: #ddd;
+}
+#box_left>div>ul{
+	width: 250px;
+	height: 100px;
+	padding-left: 0px;
+	margin-top: 0px;
+}
+#box_left>div>ul>li{
+	display: block;
+	line-height: 20px;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+#titles{
+	font-weight: bold;
+	width:250px;
+}
+#box_left>div>ul>li:hover{
+	color: blue;
+}
+#more{
+	line-height: 30px;
+	text-align: center;
+}
+#more:hover{
+	color: blue;
+}
+/*........................................................*/
+.box{
+	width: 675px;
+	height: 240px;
+	border-top: none;
+	text-align: center;
+	border-bottom: none;
+	position: relative;
+	overflow: hidden; 
+	left: 15px;
+}
+.slider{
+	width: 4725px;
+	height: 240px;
+	position: relative;
+	left: -675px;
+}
+
+.slide{
+	width: 675px;
+	float: left;
+	overflow:hidden;
+}
+.slider>.slide>img{
+	height: 240px;
+}
+.box>span{
+	top:100px;
+	text-align: center;
+	font-size: 30px;
+	line-height: 40px;
+	display: block;
+	width: 30px;
+	height: 40px;
+	cursor: pointer;
+	color: #ccc;
+	background:red;
+	position: absolute;
+	/*display: none;*/
+	opacity: 0;
+}
+#left{
+	left: 10px;
+}
+
+#right{
+	right:10px;
+}
+
+.nav{
+	width: 300px;
+	height: 20px;
+	padding-left: 0px;
+	position: absolute;
+	margin-bottom: 0px;
+	left: 200px;
+	bottom: 5px;
+
+}
+
+.nav>li{
+	float: left;
+	width: 15px;
+	height:15px;
+	text-align: center;
+	line-height: 15px;
+	background:#ccc;
+	cursor: pointer; 
+	margin: 0 15px;
+	border-radius: 50%;
+	list-style: none;
+}
+#active{
+	background: red;
+	color: #ccc;
+}
+/*..........................................................*/
+#right_box{
+	width: 250px;
+	height: 240px;
+	float: right;
+	position:relative;
+	left: 5px;
+	top: -240px;
+}
+#right_3{
+	width: 250px;
+	height: 110px;
+	margin-top: 10px;
+	float: left;
+}
+#right_3>img{
+	width: 250px;
+	height: 110px;
+	float: left;
 }
