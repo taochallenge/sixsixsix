@@ -43,25 +43,94 @@ select{
 }
 #logo{
 	float: left;
-	margin-top: 20px;
+	margin-top: 15px;
+	margin-left: 20px;
+}
+#logo>img{
+	width: 70px;
+	height: 70px;
 }
 #word{
 	float: left;
+	margin-left: 50px;
 	width: 200px;
+}
+#search{
+	width: 500px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
 }
 #search>input{
 	width: 400px;
-	height: 30px;
-	margin-top: 20px;
-	margin-left: 100px;
-	border: 2px solid #f3f2f2;
+	height: 40px;
+	border: 2px solid #ccc;
 	float: left;
 }
 #search>button{
-	height: 30px;
-	width: 50px;
+	height: 40px;
+	width: 70px;
 	margin-left: 0;
-	margin-top: 20px;
-	background-color: #f3f2f2;
+	background-color: #ccc;
 	float: left;
+}
+#car{
+	width: 100px;
+	height: 40px;
+	float: left;
+	border: 1px solid #ccc;	
+}
+#car>img{
+	margin-top: 10px;
+	float: left;
+}
+#car>p{
+	width: 60px;
+	line-height: 20px;
+	float: left;
+}
+#qrcode{
+	float:right;
+	margin-top: 0px;
+}
+#qrcode>img{
+	width: 100px;
+	height: 100px;
+}
+#box_top{
+	width: 1200px;
+	height: 40px;
+	float: left;
+	border-bottom: 1px solid #ccc;
+}
+#left_2{
+	width: 200px;
+	height: 40px;
+	float: left;
+}
+#left_2>p{
+	text-align: center;
+	font-weight:bold;
+}
+#right_1{
+	width: 1000px;
+	height: 40px;
+	float: right;
+}
+#right_1>ul{
+	float: left;
+}
+#right_1>ul>li{
+	display: block;
+	text-align: center;
+	width: 130px;
+	float: left;
+	font-weight: bold;
+}
+#right_1>ul>li:hover{
+	border-bottom: 2px solid red;
+	color: red;
+}
+#right_2{
+	float: right;
 }
