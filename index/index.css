@@ -2,5 +2,114 @@
 * @Author: taochallenge
 * @Date:   2019-12-17 17:58:12
 * @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-17 17:58:12
+* @Last Modified time: 2019-12-18 20:43:20
 */
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+#top-wrap{
+	height: 35px;
+	background-color: rgb(249,249, 249);
+}
+#top{
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 13px;
+}
+#top-right{
+	position: absolute;
+	top: 0;
+	left: 400px;
+	float: right;
+}
+#top-right a{
+	display: inline-block;
+	color: rgb(100, 100, 100);
+}
+#login{
+	color: red;
+}
+#welcome{
+	float: left;
+}
+#zero{
+	color: red;
+}
+#smallmarket{
+	position: relative;
+	top: 5px;
+}
+#top-wright-text{
+	height: 10px;
+	line-height: 10px;
+	border-left: 1px solid #ccc;
+	display: inline-block;
+}
+#head-wrap{
+	height: 142px;
+	border-bottom:2px solid rgb(255,40,50);
+}
+#head{
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+input{
+	position: absolute;
+	left: 400px;
+	top: 25px;
+	width: 500px;
+	height: 35px;
+	border: 2px solid rgb(255,40,50);
+}
+input:focus{
+	outline: none;
+}
+#search{
+	display: block;
+	height: 39px;
+	width: 42px;
+	background-color: rgb(255,40,50);
+	position: absolute;
+	top: 25px;
+	left: 900px;
+	text-align: center;
+}
+#mirror{
+	margin-top: 2px;
+}
+#market{
+	color: white;
+	width: 100px;
+	height: 39px;
+	background-color: rgb(255,40,50);
+	position: absolute;
+	top: 25px;
+	left: 1000px;
+}
+#marketimg{
+	margin-top: 2px;
+}
+#markettxt{
+	position: absolute;
+	top: 9px;
+	font-size: 15px;
+}
+#ding{
+	width: 100px;
+	height: 39px;
+	position: absolute;
+	top: 25px;
+	left: 1100px;
+	background-color: rgb(246,246, 246);
+	text-align: center;
+	line-height: 39px;
+	color: rgb(100,100,100);
+}
