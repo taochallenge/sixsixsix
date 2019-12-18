@@ -13,6 +13,10 @@ ul,li{
 }
 a{
 	text-decoration: none;
+	color: #666666;
+}
+a:hover{
+	text-decoration: underline;
 }
 .code img{
 	float: right;
@@ -24,10 +28,10 @@ a{
 }
 #homenav{
 	float: left;
+	position: relative;
 	width: 200px;
 	height: 670px;
 	border: 1px solid yellow;
-	background-color: #9ff;
 	margin-left: 140px;
 }
 #homenav span{
@@ -42,12 +46,35 @@ a{
 	height: 20px;
 }
 .home_first{
+	color: #404040;
 	margin-left: 10px;
 	width: 180px;
 	height: 90px;
 	font-size: 12px;
 	line-height: 14px;
 	border-bottom: 1px solid #abdcfe; 
+}
+.home_first:hover{
+	width: 700px;
+	border: none;
+}
+.home_zero{
+	width: 200px;
+	height: 90px;
+}
+.home_zero:hover {
+	width: 700px;
+	background-color:rgb(252,157,153);
+}
+.home_zero:hover .home_second{
+	display: block;
+}
+.home_second{
+	font-size: 13px;
+	/*padding-left: 350px;*/
+	line-height: 20px;
+	text-align: center;
+	display: none;
 }
 .ha{
 	float: left;
@@ -64,7 +91,24 @@ a{
 	text-align: center;
 	color: #fff;
 }
+.left_middle{
+	float: left;
+	height: 550px;
+	width: 200px;
+	border: 1px solid rgb(226,226,226);
+	margin-left: -200px;
+	margin-top: 690px;
+}
+.hot{
+	width: 200px;
+	height: 30px;
+	background-color: rgb(226,226,226);
+	text-align: center;
+}
 #box{
+	left: 0;
+	top: 0;
+	z-index: -1;
 	width: 1000px;
 	height: 300px;
 	margin-left:350px;
@@ -144,4 +188,22 @@ a{
 .nav .active{
 	background:red;
 }
-
+.time{
+	width: 1200px;
+	height: 480px;
+	margin-left: 350px;
+}
+.timetitle{
+	height: 35px;
+	width: 1200px;
+	background-color: rgb(250,144,24);
+}
+.timetitle img{
+	width: 30px;
+	height: 35px;
+}
+.timetitle a{
+	margin-left: 20px;
+	color: white;
+	text-align: center;
+}
