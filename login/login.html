@@ -3,8 +3,98 @@
 <head>
 	<meta charset="UTF-8">
 	<title>登录 - 当当网</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
+	<div class="top">
+		<p>
+			<span><img src="image/logo.png" id="logo"></span>
+			<span><a href="http:\\baidu.com" id="txt">登录改进建议</a></span>
+		</p>
+	</div>
+	<div class="image">
+		<img src="image/dangdang.png" id="dangdang" style="width: 600px "/>
+	</div>
+	<div class="box">
+		<p class="tit">
+			<span class="brand">当当登录</span>
+			<span>用户登录</span>
+		</p>
+
+		<input class="inp" type="text" placeholder="用户名">
+		<p class="notice"></p>
+
+		<input class="inp" type="password" placeholder="密码">
+		<p class="notice"></p>
+
+		<div>
+			<input class="inp code" type="text" placeholder="验证码">
+			<button class="getCode">获取验证码</button>
+		</div>
+		<div class="codeImg">
+			<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->
+		</div>
+		<p class="notice"></p>
+
+		<input type="checkbox" checked>下次自动登录
+		<button class="btn">登录</button>
+	</div>
+	<div class="bottom">
+		<p style="text-align: center">公司简介&nbsp;|&nbsp;诚聘英才&nbsp;|&nbsp;手机当当&nbsp;|网站联盟&nbsp;|&nbsp;当当招商&nbsp;|
+			&nbsp;机构销售&nbsp;|&nbsp;官方Blog</p>
+		<p style="text-align: center;">Copyright (C) 当当网 2004-2017, All Rights Reserved</p>
+		<p style="text-align: center;">京ICP证041189号|出版物经营许可证 新出发京批字第直0673号|食品流通许可证：SP1101011010021855(1-1)</p>
+		<p style="text-align: center;">互联网药品信息服务资格证编号：(京)-非经营性-2012-0016|京公网安备110101000001号</p>
+	</div>
+	
+	
 	
 </body>
+<script>
+	window.onload=setTimeout(function(){
+		alert("当当平台及销售商不会以任何理由，要求您点击任何网址链接进行退款或支付操作,当当客服电话01012000");
+	} ,1000)
+	var pList=document.getElementsByClassName("notice");
+		var inpList=document.getElementsByClassName("inp");
+		var btnList=document.getElementsByTagName("button");
+		var inpcode=document.getElementsByClassName("inp code");
+		var srcList=["image/zAZfB.jpg","image/ZEhuN.jpg","image/zFC9H.jpg","image/zhWY9.jpg",
+		"image/Zin4c.jpg","image/ZITGj.jpg","image/zJ6iV.jpg","image/zjsKP.jpg","image/ZKc9S.jpg",
+		"image/zKDXU.jpg" 
+		];
+		var codeimg=document.getElementsByClassName("codeImg");
+		var img1=new Image();
+		inpList[0].onfocus=function(){
+			pList[0].innerHTML="请输入4-10位用户名";
+		}
+		inpList[1].onfocus=function(){
+			pList[1].innerHTML="请输入6-12位密码";
+		}
+		inpList[0].onblur=function(){
+			pList[0].innerHTML="";
+		}
+		inpList[1].onblur=function(){
+			pList[1].innerHTML="";
+		}
+		btnList[0].onclick=function(){
+			img1.src=srcList[Math.floor(10*Math.random())];
+			codeimg[0].appendChild(img1);	
+		}
+		btnList[1].onclick=function(){
+			if(inpList[0].value.length<4||inpList[0].value.length>10){
+				pList[0].innerHTML="用户名位数不对";
+			}
+			if(inpList[1].value.length<6||inpList[1].value.length>12){
+				pList[1].innerHTML="密码位数不对";
+			}
+			if(inpcode[0].value!=img1.src.slice(-9,-4)){
+				pList[2].innerHTML="验证码错误";
+			}
+			if(inpList[0].value.length>=4&&inpList[0].value.length<=10&&inpList[1].value.length>=6&&inpList[1].value.length<=12
+			&&inpcode[0].value==img1.src.slice(-9,-4)){
+				alert("登录成功");
+			}
+			
+		}
+</script>
 </html>

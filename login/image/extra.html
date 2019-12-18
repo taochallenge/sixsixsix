@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 300px;
+			height: 400px;
+			padding: 0 20px;
+			border: 2px solid #1688ea;
+			margin: 50px auto;
+		}
+		.tit{
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+		.brand{
+			color: #1688ea;
+			font-size: 18px;
+			margin-right: 20px;
+		}
+		.inp{
+			width: 100%;
+			height: 40px;
+			text-indent: 8px;
+		}
+		.notice{
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+
+		.code{
+			width: 60%;
+		}
+		.getCode{
+			width: 35%;
+			height: 44px;
+			float: right;
+			border: none;
+			background-color: #eee;
+		}
+		.codeImg{
+			height: 40px;
+		}
+		.btn{
+			background: #1688ea;
+			width: 100%;
+			height: 40px;
+			border: none;
+			margin-top: 8px;
+			color: #fff;
+			border-radius: 3px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p class="tit">
+			<span class="brand">Web开发二</span>
+			<span>用户登录</span>
+		</p>
+
+		<input class="inp" type="text" placeholder="用户名">
+		<p class="notice"></p>
+
+		<input class="inp" type="password" placeholder="密码">
+		<p class="notice"></p>
+
+		<div>
+			<input class="inp code" type="text" placeholder="验证码">
+			<button class="getCode">获取验证码</button>
+		</div>
+		<div class="codeImg">
+			<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->
+		</div>
+		<p class="notice"></p>
+
+		<input type="checkbox" checked>下次自动登录
+		<button class="btn">登录</button>
+	</div>
+	<script>
+		
+	</script>
+</body>
+</html>

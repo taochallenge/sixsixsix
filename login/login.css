@@ -1,6 +1,87 @@
-/*
-* @Author: taochallenge
-* @Date:   2019-12-17 17:59:39
-* @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-17 17:59:39
-*/
+        *{
+			padding: 0;
+			margin: 0;
+		}
+		.image{
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 50px;
+			top: 80px;
+		}
+		.top{
+			position: absolute;
+			top: 20px;
+			width: 1000px;
+			height: 36px;
+			left: 200px;
+		}
+		#logo{
+			height: 32px;
+			position: absolute;
+			
+		}
+		#txt{
+			margin-left: 800px;
+			color: red;
+		}
+		.box{
+			width: 300px;
+			height: 400px;
+			padding: 0 20px;
+			border: 2px solid #1688ea;
+			margin: 50px auto;
+			position: absolute;
+			left: 1000px;
+			top: 100px;
+		}
+		.tit{
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+		.brand{
+			color: #1688ea;
+			font-size: 18px;
+			margin-right: 20px;
+		}
+		.inp{
+			width: 100%;
+			height: 40px;
+			text-indent: 8px;
+		}
+		.notice{
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+
+		.code{
+			width: 60%;
+		}
+		.getCode{
+			width: 35%;
+			height: 44px;
+			float: right;
+			border: none;
+			background-color: #eee;
+		}
+		.codeImg{
+			height: 40px;
+		}
+		.btn{
+			background: #1688ea;
+			width: 100%;
+			height: 40px;
+			border: none;
+			margin-top: 8px;
+			color: #fff;
+			border-radius: 3px;
+		}
+		.bottom{
+			position:absolute;
+			top:800px;
+			width: 1000px;
+			height: 200px;
+			left: 200px;
+			
+		}
