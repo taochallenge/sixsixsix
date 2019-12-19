@@ -4,3 +4,187 @@
 * @Last Modified by:   taochallenge
 * @Last Modified time: 2019-12-17 18:10:01
 */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #f99;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+#top-wrap{
+	height: 35px;
+	background-color: rgb(249,249, 249);
+}
+#top{
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 13px;
+}
+#top-right{
+	position: absolute;
+	top: 0;
+	left: 400px;
+	float: right;
+}
+#top-right a{
+	display: inline-block;
+	color: rgb(100, 100, 100);
+}
+#login1{
+	color: red;
+}
+#zero{
+	color: red;
+}
+#smallmarket{
+	position: relative;
+	top: 5px;
+}
+#top-wright-text{
+	height: 10px;
+	line-height: 10px;
+	border-left: 1px solid #ccc;
+	display: inline-block;
+}
+#head-wrap{
+	height: 190px;
+	border-bottom:4px solid rgb(255,40,50);
+}
+#hi{
+	position: relative;
+	width: 1000px;
+	left: 100px;
+}
+#hi0{
+	color: #f00;
+}
+#hi1{
+	color: #f00;
+}
+#tuisong{
+	position: relative;
+	left: 100px;
+}
+#logo2{
+	position: relative;
+	left: 100px;
+}
+#logo3{
+	position: relative;
+	left: 102px;
+}
+#head{
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+#shop03{
+	position: relative;
+	left: 100px;
+	top: 10px;
+	float: left;
+}
+#tishi1{
+	position: relative;
+	top: 90px;
+	color: #ccc;
+	font-size: 20px;
+}
+#shop07{
+	position: relative;
+	left: 115px;
+	top: 180px;
+	float: left;
+}
+#gooo{
+	color: #ccc;
+}
+#tishi2{
+	position: relative;
+	left: -150px;
+	top: 190px;
+	color: #ccc;
+	font-size: 10px;
+}
+#line0{
+	height: 285px;
+	border-bottom:1px solid rgb(220,220,220);
+}
+
+ul,li{
+	list-style: none; 
+}
+.box{
+	width: 960px;
+	height: 580px;
+	border: 1px solid #ccc;
+	margin: 100px auto;
+	position: relative;
+	overflow: hidden;
+}
+.slider{
+	width: 6720px;
+	position: absolute;
+	left: -960px;
+}
+.slide{
+	width: 960px;
+	overflow: hidden;
+	float: left;
+}
+.box>span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	position: absolute;
+	top: 175px;
+	line-height: 50px;
+	background: rgb(255, 0, 0);
+	font-size: 30px;
+	opacity: 0;
+}
+#left{
+	left: 30px;
+}
+#right{
+	right: 30px;
+}
+.nav{
+	position: absolute;
+	left: 500px;
+	bottom: 20px;
+}
+.nav>li{
+	text-align: center;
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	cursor: pointer;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+.nav .active{
+	color: #fff;
+	background: red;
+}
+#first{
+	color: red;
+}
+.first{
+	color: red;
+	background: #ccc;
+}
