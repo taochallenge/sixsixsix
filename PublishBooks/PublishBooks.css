@@ -4,3 +4,27 @@
 * @Last Modified by:   taochallenge
 * @Last Modified time: 2019-12-17 18:11:59
 */
+*{
+		margin: 0;
+		padding: 0;
+	}
+	#banner { 
+		height:472px; 
+		width:100%; 
+		background-color:#28243c;
+		background-image: url(images/book_06.png);
+		background-repeat :no-repeat;
+		background-position:center center;
+	}
+	#go { 
+		width:230px; 
+		height:60px; 
+		position:absolute; 
+		left:105px; 
+		top:335px;
+	}
+	.main { 
+		width:1200px; 
+		margin:0 auto; 
+		position:relative;
+	}
