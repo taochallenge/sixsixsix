@@ -25,7 +25,7 @@
 	</div>
 	<div id="head-wrap">
 		<div id="head">
-			<img src="images/logo.gif" alt="">
+			<img src="images/SIXSPEED.jpg" alt="" id="logo_img">
 			<input type="text">
 			<a href="" id="search">
 				<img id="mirror" src="images/bigmirror.png" alt="">
@@ -34,6 +34,25 @@
 			<a href="#" id="ding">我的订单</a>
 			<div id="hot">热搜： <a href="#"></a></div>
 		</div>
+	</div>
+	<div class="titlenav">
+		<ul>
+			<li><a href="#">家局榜单</a></li>
+			<li><a href="#">家装榜单</a></li>
+			<li><a href="#">家纺用品</a></li>
+			<li><a href="#">床品被套</a></li>
+			<li><a href="#">整理收纳</a></li>
+			<li><a href="#">厨房用品</a></li>
+			<li><a href="#">水杯水壶</a></li>
+			<li><a href="#">清洁用品</a></li>
+			<li><a href="#">家具家装</a></li>
+			<li><a href="#">厨房卫浴</a></li>
+			<li><a href="#">灯具照明</a></li>
+			<li><a href="#">精品家具</a></li>
+			<li><a href="#">储物置物</a></li>
+			<li><a href="#">礼品卡</a></li>
+
+		</ul>
 	</div>
 	<div id="homenav">
 		<div class="title">家居家纺导购</a></div>
@@ -191,24 +210,28 @@
 		</div>
 		<div class="time_img">
 			<div class="time_pic">
+				<span class="countdown">1</span>
 				<img src="images/time1.png" class="time_big">
 				<a href="#">泰密熊马桶坐垫圈家用防水拉链款坐便器马桶套可爱四季通用加厚</a>
 				<h2>￥7.90</h2>
 				<button></button>
 			</div>
 			<div class="time_pic">
+				<span class="countdown">2</span>
 				<img src="images/time2.png" class="time_big">
 				<a href="#">百露抽屉式衣柜收纳箱透明收纳柜塑料衣服衣物整理箱特大号储物</a>
 				<h2>￥15.90</h2>
 				<button></button>
 			</div>
 			<div class="time_pic">
+				<span class="countdown">3</span>
 				<img src="images/time3.jpg" class="time_big">
 				<a href="#">乐扣乐扣旗舰店保温杯便携水杯大容量真空不锈钢两用泡茶杯儿童</a>
 				<h2>￥63.00</h2>
 				<button></button>
 			</div>
 			<div class="time_pic">
+				<span class="countdown">4</span>
 				<img src="images/time4.jpg" class="time_big">
 				<a href="#">木马人简易书架置物落地简约实木客厅儿童小书柜子桌面上收纳学生</a>
 				<h2>￥59.00</h2>
@@ -216,6 +239,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<div class="newgoods">
 		<div class="goodstitle">
 			<img src="images/clock.jpg">
@@ -244,6 +268,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div>
+		<button id="gotop">返回顶部</button>
 	</div>
 </body>
 <script type="text/javascript" src= "furniture.js"></script>
@@ -359,8 +386,33 @@
 			this.style.height="250px";
 		}
 	}
-	
+	var gotop = document.getElementById("gotop");
+	gotop.onclick = function(){
+		window.location.hash="#top-wrap";
+	}
 
+	var countdown = document.getElementsByClassName("countdown");
+	var maxtime = 1000*60;
+	function count(){
+		if(maxtime>=0){
+			var hours = Math.floor(maxtime/3600);
+			var minutes = Math.floor((maxtime-hours*3600)/60);
+			var seconds = Math.floor((maxtime-hours*3600)%60); 
+			var mesg = "还剩："+hours+"小时"+minutes+"分钟"+seconds+"秒";
+			for(var i=0;i<countdown.length;++i){
+				countdown[i].innerHTML = mesg;
+			}
+			
+			--maxtime;
+		}
+	}
+	for(var j = 0;j<countdown.length;++j){
+		countdown[j] = setInterval("count()",1000);
+	}
+	
+	// gotop.onmouseout = function(){
+	// 	window.location.hash = "gotop";
+	// }
 </script>
 </script>
 </html>

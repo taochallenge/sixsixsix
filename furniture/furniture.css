@@ -18,6 +18,12 @@ a{
 a:hover{
 	text-decoration: underline;
 }
+body{
+	/*background-image: url(images/background.jpg);*/
+	background-color: #e3c887;
+	opacity: 1.5;
+	background-repeat: no-repeat;
+}
 #top-wrap{
 	height: 35px;
 	background-color: rgb(249,249, 249);
@@ -62,6 +68,10 @@ a:hover{
 #head-wrap{
 	height: 142px;
 	border-bottom:2px solid rgb(255,40,50);
+}
+#logo_img{
+	width: 255px;
+	height:90px;
 }
 #head{
 	position: relative;
@@ -120,6 +130,16 @@ input:focus{
 	line-height: 39px;
 	color: rgb(100,100,100);
 }
+.titlenav{
+	text-align: center;
+	background-color: rgb(244,208,0);
+}
+.titlenav li{
+	display: inline;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-right: 1px solid blue;
+}
 .code img{
 	float: right;
 	width: 50px;
@@ -167,10 +187,10 @@ input:focus{
 	height: 90px;
 }
 .home_zero:hover {
-	width: 700px;
-	background-color:rgb(252,157,153);
+	width: 500px;
+	background-color:#cbf5fb;
 }
-.home_zero:hover .home_second{
+.home_second:hover .home_second{
 	display: block;
 }
 .home_second{
@@ -321,7 +341,7 @@ input:focus{
 	margin-left: 10px;
 	margin-right: 5px;
 	margin-top: 10px;
-	padding-top: 35px;
+	padding-top: 10px;
 	font-size: 13px;
 	border: 1px solid rgb(218,218,218);
 }
@@ -337,6 +357,11 @@ input:focus{
 	height: 40px;
 	background-image: url("images/time5.png");
 	margin-left: 110px;
+}
+.countdown{
+	font-size: 18px;
+	color: red;
+	line-height: 10px;
 }
 .newgoods{
 	margin-top: 20px;
@@ -378,3 +403,12 @@ input:focus{
 	width: 230px;
 	height: 250px;
 }
+#gotop{
+	width: 100px;
+	height: 50px;
+	float: right;
+	margin-right: 50px;
+	margin-top:-50px; 
+	background-color: #7AC0F5;
+}
+
