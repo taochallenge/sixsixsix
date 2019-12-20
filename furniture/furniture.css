@@ -18,13 +18,115 @@ a{
 a:hover{
 	text-decoration: underline;
 }
+#top-wrap{
+	height: 35px;
+	background-color: rgb(249,249, 249);
+}
+#top{
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 13px;
+}
+#top-right{
+	position: absolute;
+	top: 0;
+	left: 400px;
+	float: right;
+}
+#top-right a{
+	display: inline-block;
+	color: rgb(100, 100, 100);
+}
+#login{
+	color: red;
+}
+#welcome{
+	float: left;
+}
+#zero{
+	color: red;
+}
+#smallmarket{
+	position: relative;
+	top: 5px;
+}
+#top-wright-text{
+	height: 10px;
+	line-height: 10px;
+	border-left: 1px solid #ccc;
+	display: inline-block;
+}
+#head-wrap{
+	height: 142px;
+	border-bottom:2px solid rgb(255,40,50);
+}
+#head{
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+input{
+	position: absolute;
+	left: 400px;
+	top: 25px;
+	width: 500px;
+	height: 35px;
+	border: 2px solid rgb(255,40,50);
+}
+input:focus{
+	outline: none;
+}
+#search{
+	display: block;
+	height: 39px;
+	width: 42px;
+	background-color: rgb(255,40,50);
+	position: absolute;
+	top: 25px;
+	left: 900px;
+	text-align: center;
+}
+#mirror{
+	margin-top: 2px;
+}
+#market{
+	color: white;
+	width: 100px;
+	height: 39px;
+	background-color: rgb(255,40,50);
+	position: absolute;
+	top: 25px;
+	left: 1000px;
+}
+#marketimg{
+	margin-top: 2px;
+}
+#markettxt{
+	position: absolute;
+	top: 9px;
+	font-size: 15px;
+}
+#ding{
+	width: 100px;
+	height: 39px;
+	position: absolute;
+	top: 25px;
+	left: 1100px;
+	background-color: rgb(246,246, 246);
+	text-align: center;
+	line-height: 39px;
+	color: rgb(100,100,100);
+}
 .code img{
 	float: right;
-	width: 120px;
-	height: 120px;
+	width: 50px;
+	height: 50px;
 	position: fixed;
 	top: 200px;
-	right:5px;
+	right:110px;
 }
 #homenav{
 	float: left;
@@ -33,6 +135,7 @@ a:hover{
 	height: 670px;
 	border: 1px solid yellow;
 	margin-left: 140px;
+	margin-top: 70px;
 }
 #homenav span{
 	font-size: 14px;
@@ -55,6 +158,7 @@ a:hover{
 	border-bottom: 1px solid #abdcfe; 
 }
 .home_first:hover{
+	z-index: 1;
 	width: 700px;
 	border: none;
 }
@@ -71,7 +175,6 @@ a:hover{
 }
 .home_second{
 	font-size: 13px;
-	/*padding-left: 350px;*/
 	line-height: 20px;
 	text-align: center;
 	display: none;
@@ -93,11 +196,11 @@ a:hover{
 }
 .left_middle{
 	float: left;
-	height: 550px;
+	height: 490px;
 	width: 200px;
 	border: 1px solid rgb(226,226,226);
 	margin-left: -200px;
-	margin-top: 690px;
+	margin-top: 750px;
 }
 .hot{
 	width: 200px;
@@ -108,11 +211,11 @@ a:hover{
 #box{
 	left: 0;
 	top: 0;
-	z-index: -1;
+	z-index: 0;
 	width: 1000px;
 	height: 300px;
 	margin-left:350px;
-	margin-top: 200px;
+	margin-top: 70px;
 	position: relative;
 	overflow: hidden;
 }
@@ -123,9 +226,9 @@ a:hover{
 	display: block;
 }
 .slider{
-	width: 8000px;
+	width: 1000px;
 	position: absolute;
-	left: -1000px;
+	top: -300px;
 }
 .slide{
 	width: 1000px;
@@ -134,7 +237,7 @@ a:hover{
 }
 .slide img{
 	width: 1000px;
-	height: 300px;
+	height: 296px;
 	align:center;
 }
 .box>span{
@@ -189,13 +292,15 @@ a:hover{
 	background:red;
 }
 .time{
-	width: 1200px;
-	height: 480px;
+	margin-top: 20px;
+	width: 1000px;
+	height: 450px;
 	margin-left: 350px;
+	border: 1px solid rgb(218,218,218);
 }
 .timetitle{
 	height: 35px;
-	width: 1200px;
+	width: 1000px;
 	background-color: rgb(250,144,24);
 }
 .timetitle img{
@@ -203,7 +308,73 @@ a:hover{
 	height: 35px;
 }
 .timetitle a{
-	margin-left: 20px;
 	color: white;
 	text-align: center;
+	float: right;
+	margin-right: 890px;
+	margin-top: 5px;
+}
+.time_pic{
+	width: 230px;
+	height: 250px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 5px;
+	margin-top: 10px;
+	padding-top: 35px;
+	font-size: 13px;
+	border: 1px solid rgb(218,218,218);
+}
+.time_pic h2{
+	color:red;
+}
+.time_pic img{
+	width: 230px;
+	height: 250px;
+}
+.time_pic button{
+	width: 125px;
+	height: 40px;
+	background-image: url("images/time5.png");
+	margin-left: 110px;
+}
+.newgoods{
+	margin-top: 20px;
+	width: 1000px;
+	height: 380px;
+	margin-left: 350px;
+	border: 1px solid rgb(218,218,218);
+}
+.goodstitle{
+	height: 35px;
+	width: 1000px;
+	background-color: #9f6633;
+}
+.goodstitle img{
+	width: 30px;
+	height: 35px;
+}
+.goodstitle a{
+	color: white;
+	text-align: center;
+	float: right;
+	margin-right: 890px;
+	margin-top: 5px;
+}
+.newgoods_pic{
+	width: 230px;
+	height: 250px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 5px;
+	margin-top: 10px;
+	font-size: 13px;
+	border: 1px solid rgb(218,218,218);
+}
+.newgoods_pic h2{
+	color:red;
+}
+.newgoods_pic img{
+	width: 230px;
+	height: 250px;
 }

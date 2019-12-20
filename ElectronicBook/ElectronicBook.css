@@ -260,7 +260,6 @@ select{
 	background: red;
 	color: #ccc;
 }
-/*..........................................................*/
 #right_box{
 	width: 250px;
 	height: 240px;
@@ -280,3 +279,127 @@ select{
 	height: 110px;
 	float: left;
 }
+/*..........................................................*/
+#middle_bottom{
+	width: 680px;
+	height: 830px;
+	float: left;
+	margin-left: 12px;
+}
+#top_title{
+	float: left;
+}
+#top_title>img{
+	position: relative;
+	top: 5px;
+	left: 0px;
+}
+#boxs{
+	width: 680px;
+	height: 800px;
+	border-top: none;
+	text-align: center;
+	border-bottom: none;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden; 
+}
+#sliders{
+	width: 3400px;
+	height: 800px;
+	position: relative;
+	left: -680px;
+}
+.slides{
+	width: 680px;
+	height: 800px;
+	float: left;
+	overflow:hidden;
+}
+.slides>ul{
+	width: 680px;
+	height: 800px;
+	padding-left: 0px;
+}
+.slides>ul>li{
+	width: 168px;
+	height: 300px;
+	display: block;
+	float: left;
+	border: 1px solid #ccc;
+
+}
+#book>img{
+	width: 168px;
+	height: 200px;
+	float: left;
+}
+.slides>ul>li>div{
+	width: 168px;
+	height: 100px;
+	float: left;
+	margin-bottom: 0px;
+}
+.slides>ul>li>div>span{
+	width: 168px;
+	height: 50px;
+	float: left;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+
+}
+.slides>ul>li>div>div{
+	width: 168px;
+	height: 50px;
+	float: left;
+}
+#boxs>span{
+	top:300px;
+	text-align: center;
+	font-size: 60px;
+	line-height: 60px;
+	display: block;
+	width: 40px;
+	height: 70px;
+	cursor: pointer;
+	color: #ccc;
+	background:red;
+	position: absolute;
+	/*display: none;*/
+	opacity: 0;
+}
+
+#lefts{
+	left: 10px;
+}
+
+#rights{
+	right:10px;
+}
+
+.navs{
+	position: absolute;
+	left: 300px;
+	bottom: 10px;
+}
+
+.navs>li{
+	float: left;
+	width: 15px;
+	height:15px;
+	text-align: center;
+	line-height: 25px;
+	background:#ccc;
+	cursor: pointer; 
+	margin: 0 10px;
+	border-radius: 50%;
+	list-style: none;
+}
+#actives{
+	background: red;
+	color: #ccc;
+}
+/*..........................................................*/
+
