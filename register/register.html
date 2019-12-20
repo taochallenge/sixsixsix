@@ -1,10 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>新用户注册 - 当当网</title>
-</head>
-<body>
-	
-</body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="register.css">
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="one">
+				<img src="images/logo.png" />
+				<span style="margin-left: 600px; font-family: '微软雅黑'; font-size: 15px;">欢迎登录当当网，请<a href="../Login/login.html">登录</a></span>
+			</div>
+			<div style="border: 1px solid red;"></div>
+			<br /><br />
+			<div class="two">
+				<span style=" margin-left: 20px; ">新用户注册</span>
+				<span id="span">当当首页&nbsp;&nbsp;注册帮助</span>
+			</div>
+			<div class="three">
+				<div><p style="text-align: center; color: red; font-size: 15px;">贴心提示：请勿设置与邮箱密码相同的账户登录密码或支付密码，防止不法分子窃取您的当当账户信息，谨防诈骗！ </p></div>
+				<div class="box">
+		    
+                   <p class="tit"></p>
+                   
+                   <span class="span">手机号码</span>
+		           <input class="inp" type="text" placeholder="请输入您的手机号码">
+		           <img src=" "/>
+		           <p class="notice"></p> 
+                   <span class="span">登录密码</span>
+		           <input class="inp" type="password" placeholder="登录密码">
+		           <img src=" "/>
+		           <p class="notice"></p>
+		           <span class="span">确认密码</span>
+		           <input class="inp" type="password" placeholder="确认密码">
+		           <img src=" "/>
+		           <p class="notice"></p>
+
+		<div>
+			<span style="margin-right: 35px;">验证码</span>
+			<input class="inp code" type="text" placeholder="验证码">
+			<br /> <br />
+			<button class="getCode">获取验证码</button>
+		</div>
+		<div class="codeImg">
+			<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->
+		</div>
+		<p class="notice"></p>
+
+		<input type="checkbox" checked>我已阅读并同意 《当当交易条款》 《当当社区条款》和 《当当隐私政策》
+		<button class="btn">立即注册</button>
+	</div>
+				
+			</div>  
+		</div>
+	<div class="bottom">
+	<p align="center">公司简介|诚聘英才|手机当当|网站联盟|当当招商|机构销售|官方Blog</p>
+	<br />
+	<p align="center">Copyright (C) 当当网 2004-2017, All Rights Reserved</p>
+	</div>
+	</body>
+	<script>
+		var pList=document.getElementsByClassName("notice");
+		var inpList=document.getElementsByClassName("inp");
+		var btnList=document.getElementsByTagName("button");
+		var inpcode=document.getElementsByClassName("inp code");
+		var srcList=["images/zAZfB.jpg","images/ZEhuN.jpg","images/zFC9H.jpg","images/zhWY9.jpg",
+		"images/Zin4c.jpg","images/ZITGj.jpg","images/zJ6iV.jpg","images/zjsKP.jpg","images/ZKc9S.jpg",
+		"images/zKDXU.jpg" 
+		];
+		var imgList=document.getElementsByTagName("img");
+		var codeimg=document.getElementsByClassName("codeImg");
+		var img1=new Image(); 
+		inpList[0].onfocus=function(){
+			pList[0].innerHTML="手机号可用于登录、找回密码、接收订单通知等服务";
+		}
+		inpList[1].onfocus=function(){
+			pList[1].innerHTML="请输入6-12位密码";
+		}
+		inpList[2].onfocus=function(){
+			pList[2].innerHTML="请再次输入密码"; 
+		}
+		inpList[0].onblur=function(){
+			
+			if(inpList[0].value.length!=11){
+				pList[0].innerHTML="手机格式不正确，请重新输入";
+				imgList[1].src="images/叉子.png";
+			}
+			else
+			{
+				pList[0].innerHTML="";
+				imgList[1].src="images/对勾.png";
+				
+			}
+		}
+		inpList[1].onblur=function(){
+			if(inpList[1].value.length<6||inpList[1].value.length>12){
+				pList[1].innerHTML="密码位数不对";
+				imgList[2].src="images/叉子.png";
+			}
+			else
+			{
+				pList[1].innerHTML="";
+				imgList[2].src="images/对勾.png";
+				
+			}
+			
+		}
+		inpList[2].onblur=function(){
+			if(inpList[1].value!=inpList[2].value){
+				pList[2].innerHTML="两次输入的密码不一致";
+				imgList[3].src="images/叉子.png";
+			}
+			else
+			{
+				pList[2].innerHTML="";
+				imgList[3].src="images/对勾.png";
+				
+			}
+				
+		}
+		btnList[0].onclick=function(){
+			img1.src=srcList[Math.floor(10*Math.random())];
+			codeimg[0].appendChild(img1);	
+		}
+		btnList[1].onclick=function(){
+			if(inpcode[0].value!=img1.src.slice(-9,-4)){
+				pList[3].innerHTML="验证码错误";
+			}
+			if(inpList[0].value.length==11&&inpList[1].value.length>=6&&inpList[1].value.length<=12
+			&&inpcode[0].value==img1.src.slice(-9,-4)){
+				alert("注册成功");
+			}
+			}
+		 
+	</script>
 </html>
