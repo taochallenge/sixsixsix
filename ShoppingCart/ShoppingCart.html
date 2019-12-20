@@ -2,9 +2,152 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>购物车-当当网</title>
+	<title>当当—网上购物中心</title>
+	<link rel="stylesheet" href="ShoppingCart.css">
+	<script src="ShoppingCart.js"></script>
 </head>
 <body>
-	
+	<div id="top-wrap">
+		<div id="top">
+			<div id="top-right">
+				<a id="top-market" href="#"><img src="images/smallmarket.png" id="smallmarket"> 购物车<span id="zero">0</span></a>
+				<a href="#" id="top-wright-text">&nbsp;&nbsp;我的订单&nbsp;&nbsp;</a>
+				<a href="#" id="top-wright-text">&nbsp;&nbsp;我的云书房&nbsp;&nbsp;</a>
+				<a href="#" id="top-wright-text">&nbsp;&nbsp;我的当当&nbsp;&nbsp;</a>
+				<a href="#" id="top-wright-text">&nbsp;&nbsp;0元购物&nbsp;&nbsp;</a>
+				<a href="#" id="top-wright-text">&nbsp;&nbsp;小说投稿&nbsp;&nbsp;</a>
+				<a href="#" id="top-wright-text">&nbsp;&nbsp;我要出书&nbsp;&nbsp;</a>
+				<div id="top-wright-text">&nbsp;&nbsp;企业采购&nbsp;&nbsp;</div>
+				<div id="top-wright-text">&nbsp;&nbsp;客户服务&nbsp;&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<div id="head-wrap">
+		<div id="head">
+			<p id="hi">
+				<span id="hi0">Hi~亲爱的XXXXXXX</span>欢迎回当当！！
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<span id="hi1"><a href="#" id="login1">登录</a>&nbsp;</span>成为会员!!
+			</p>
+			<div><a id="ts" href="#"><img src="images/tuisong.png" alt="" id="tuisong"></a><img src="images/logo.png" alt="" id="logo2"><img src="images/liu.png" alt="" id="logo3"></div>
+			<img src="images/shop03.png" alt="" id="shop03">
+			<span id="tishi1">您的购物车还是空的，您可以：</span>
+			<a id="shop7" href="#"><img src="images/shop07.png" alt="" id="shop07"></a>
+			<span id="tishi2">登录后购物车的商品将保存到您的账号中，或者<a href="#" id="gooo"> 去逛逛</a></span>
+		</div>
+	</div>	
+	<div id="head-bottom">
+		<div id="line0"></div>
+	</div>
+	<div class="box" id="box">
+		<P id="tj">为您推荐</P>
+		<div class="slider" id="slider">
+			<div class="slide"><img src="images/qmtz5.jpg" alt=""><div class="word5">圣诞老爷爷：十万图书准备好了！！</div></div>
+			<div class="slide"><img src="images/qmtz1.jpg" alt=""><div class="word1">清明上河图密码（1-6册大全集）</div></div>
+			<div class="slide"><img src="images/qmtz2.jpg" alt=""><div id="word2">拯救你的年终计划：30万图书大减免</div></div>
+			<div class="slide"><img src="images/qmtz3.jpg" alt=""><div id="word3">寒假书单：我喜欢&nbsp;&nbsp;我爱看&nbsp;&nbsp;我想带回家</div></div>
+			<div class="slide"><img src="images/qmtz4.jpg" alt=""><div id="word4">庆余年：余年有幸与君相逢</div></div>
+			<div class="slide"><img src="images/qmtz5.jpg" alt=""><div class="word5">圣诞老爷爷：十万图书准备好了！！</div></div>
+			<div class="slide"><img src="images/qmtz1.jpg" alt=""><div class="word1">清明上河图密码（1-6册大全集）</div></div>
+		</div>
+
+		<span id="left"><</span>
+		<span id="right">></span>
+		<ul class="nav" id="nav">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div id="buttom"></div>
+	<div id="buttom-word">
+		<div id="b1">Copyright (C) 当当网 2004-2014, All Rights Reserved</div>
+		<a id="logolt" href="#"><img src="images/logolast.png" id="logolast"></a>
+		<div id="b2">京ICP证041189号出版物经营许可证 新出发京批字第直0673号</div>
+	</div>
 </body>
+<script>
+	var box = document.getElementById("box");
+	var oNavlist = document.getElementById("nav").children;
+	var slider = document.getElementById("slider");
+	var left = document.getElementById("left");
+	var right = document.getElementById("right");
+	var index = 1;
+	var timer;
+	var isMoving = false;
+	//点右箭头触发的函数
+	function next(){
+		if(isMoving){
+			return;
+		}
+		isMoving = true;
+		index++;
+		btnChange();
+		animate(slider,{left:-960*index},function(){
+			if(index == 6){
+				slider.style.left = "-960px";
+				index = 1;
+			}
+			isMoving = false;
+		});	
+	}
+	//点左箭头触发的函数
+	function prev(){
+		if(isMoving){
+			return;
+		}
+		isMoving = true;
+		index--;
+		btnChange();
+		animate(slider,{left:-960*index},function(){
+			if(index == 0){
+				slider.style.left = -960*5 + "px";
+				index = 5;
+			}
+			isMoving = false;
+		});
+	}
+	var timer = setInterval(next,3000);
+	box.onmouseover = function(){
+		animate(left,{opacity:50});
+		animate(right,{opacity:50});
+		clearInterval(timer);
+	}
+	box.onmouseout = function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});
+		timer = setInterval(next,2000);
+	}
+	right.onclick = next;
+	left.onclick = prev;
+
+	//小按钮点击
+	for(var i=0; i<oNavlist.length; i++){
+		oNavlist[i].idx = i;
+		oNavlist[i].onclick = function(){
+			index = this.idx + 1;
+			btnChange();
+			animate(slider,{left:-960*index});
+		}
+	}
+
+	//小按钮背景色切换
+	function btnChange(){
+		oNavlist[0].className = "first";
+		for(var i=1; i<oNavlist.length; i++){			
+			oNavlist[i].className = "";
+		}
+		if(index == 6){
+			oNavlist[0].className = "active";
+		}
+		else if(index == 0){
+			oNavlist[4].className = "active";
+		}
+		else{
+			oNavlist[index-1].className = "active";
+		}
+	}
+</script>
 </html>
