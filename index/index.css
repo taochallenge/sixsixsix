@@ -2,8 +2,9 @@
 * @Author: taochallenge
 * @Date:   2019-12-17 17:58:12
 * @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-18 20:43:20
+* @Last Modified time: 2019-12-20 22:48:55
 */
+/* 头部部分 */
 *{
 	margin: 0;
 	padding: 0;
@@ -23,17 +24,47 @@ a{
 	line-height: 35px;
 	font-size: 13px;
 }
+#destination{
+	display: block;
+	color: rgb(100, 100, 100);
+	width: 80px;
+	height: 33px;
+	margin-bottom: -1px;
+	border-bottom: white;
+}
+#des{
+	display: none;
+	position: absolute;
+	width: 300px;
+	height: 240px;
+	border: 1px solid red;
+	background-color: white;
+	z-index: 999;
+	border: 1px solid rgb(230, 230, 230);
+}
+#des a{
+	font-size: 12px;
+	color: rgb(100, 100, 100);
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 10px;
+	margin-bottom: -10px;
+}
 #top-right{
 	position: absolute;
 	top: 0;
-	left: 400px;
+	left: 390px;
 	float: right;
 }
 #top-right a{
+	height: 20px;
 	display: inline-block;
 	color: rgb(100, 100, 100);
 }
 #login{
+	color: red;
+}
+#vip:hover{
 	color: red;
 }
 #welcome{
@@ -46,15 +77,70 @@ a{
 	position: relative;
 	top: 5px;
 }
-#top-wright-text{
-	height: 10px;
+#top-market:hover{
+	color: red;
+}
+.top-wright-text{
+	height: 15px;
 	line-height: 10px;
-	border-left: 1px solid #ccc;
+	display: inline-block;
+}
+.wright-text{
+	height: 20px;
+	line-height: 10px;
 	display: inline-block;
 }
 #head-wrap{
 	height: 142px;
 	border-bottom:2px solid rgb(255,40,50);
+}
+#mydd{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 794px;
+	width: 70px;
+	height: 120px;
+	z-index: 999;
+	background-color: rgb(249,249, 249);
+}
+.mydd,.get,.buyy,.servelist{
+	color: rgb(100, 100, 100);
+	font-size: 12px;
+	text-indent: 4px;
+	display: inline-block;
+	width: 70px;
+	height: 20px;
+}
+#zeroget{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 864px;
+	width: 70px;
+	height: 100px;
+	z-index: 999;
+	background-color: rgb(249,249, 249);
+}
+#buy{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 1050px;
+	width: 70px;
+	z-index: 999;
+	height: 150px;
+	background-color: rgb(249,249, 249);
+}
+#serve{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 1125px;
+	width: 70px;
+	z-index: 999;
+	height: 120px;
+	background-color: rgb(249,249, 249);
 }
 #head{
 	position: relative;
@@ -62,6 +148,8 @@ a{
 	margin: 0 auto;
 }
 input{
+	color: rgb(102, 102, 102);
+	font-size: 12px;
 	position: absolute;
 	left: 400px;
 	top: 25px;
@@ -112,4 +200,51 @@ input:focus{
 	text-align: center;
 	line-height: 39px;
 	color: rgb(100,100,100);
+}
+#ding:hover{
+	color: red;
+}
+#hot{
+	font-size: 12px;
+	color: rgb(150, 150, 150);
+	position: absolute;
+	left: 400px;
+	top: 70px;
+}
+#hot a{
+	color: rgb(150, 150, 150);
+	display: inline-block;
+	margin-right: 10px;
+}
+#ad{
+	margin-left: 42px;
+}
+.all{
+	position: absolute;
+	top: 102px;
+	color: white;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	background-color: rgb(250, 40, 50);
+}
+.all span{
+	margin-left: 20px;
+}
+.all img{
+	margin-left: 40px;
+}
+.cl{
+	position: absolute;
+	top: 110px;
+	left: 230px;
+}
+.cl a{
+	margin-right: 23px;
+	color: #000;
+	font-weight: bold;
+	font-size: 15px;
+}
+.cl a:hover{
+	color: red;
 }
