@@ -228,6 +228,55 @@ input:focus{
 	background-color: rgb(226,226,226);
 	text-align: center;
 }
+.tab_aa{
+	background-color: rgb(229,131,8);
+}
+.tab_aa li {
+	height: 16px;
+	font-size: 14px;
+	padding-left: 6px;
+	display: inline-block;
+	cursor: pointer;
+	font-family: "tahoma";
+}
+.tali_1{
+	/*background-color: pink;*/
+	width: 200px;
+	height: 440px;
+}
+.tali_1 li{
+	list-style: decimal;
+	font-size: 13px;
+	color: #808080;
+	margin-left:15px; 
+	border-bottom: 1px solid #eeeeee;
+}
+.tali_1 img{
+	float: left;
+}
+.tali_1o{
+	height: 100px;
+}
+#tali_1{
+	display: block;
+	background-color: pink;
+}
+#tali_2{
+	display: none;
+	background-color: pink;
+}
+#tali_3{
+	display: none;
+	background-color: pink;
+}
+#tali_4{
+	display: none;
+	background-color: pink;
+}
+#tali_5{
+	display: none;
+	background-color: pink;
+}
 #box{
 	left: 0;
 	top: 0;
@@ -411,4 +460,37 @@ input:focus{
 	margin-top:-50px; 
 	background-color: #7AC0F5;
 }
-
+.true{
+	margin-top: 20px;
+	width: 100%;
+	height: 100px;
+	background-color:#FAFAFA;
+	text-align: center;
+}
+.footer{
+	background-color: #2e2e2e;
+	height: 150px;
+}
+.footer div{
+	width: 90px;
+	display: inline-block;
+	margin-top: 15px;
+	margin-left:180px;		}
+.footer a{
+	color: #e3e3e3;
+}
+.size{
+	font-size: 14px;
+}
+.copyright{
+	background-color: #2e2e2e;
+	border-top:1px solid #454545;
+	height: 97px;
+	text-align: center;
+	padding-top: 25px;
+	color:#919191;
+	font-size: 14px;
+}
+.copyright a{
+	color: #919191;
+}
