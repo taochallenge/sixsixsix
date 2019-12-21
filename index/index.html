@@ -4,36 +4,134 @@
 	<meta charset="UTF-8">
 	<title>当当—网上购物中心</title>
 	<link rel="stylesheet" href="index.css">
-	<script src="index.js"></script>
 </head>
 <body>
+	<!-- 上方部分 -->
 	<div id="top-wrap">
 		<div id="top">
-			<div id="destination">送至：北京<img src="images/down.png" alt=""></div>
+			<a href="" id="destination">送至：北京<img id="desimg" src="images/down.png" alt=""></a>
+			<div id="des">
+				<a href="">北京</a><a href="">天津</a><a href="">河北</a><a href="">山西</a><a href="">内蒙古</a>
+				<a href="">辽宁</a><a href="">吉林</a><a href="">沈阳</a><a href="">上海</a><a href="">江苏</a>
+				<a href="">浙江</a><a href="">安徽</a><a href="">福建</a><a href="">江西</a><a href="">山东</a>
+				<a href="">河南</a><a href="">湖北</a><a href="">湖南</a><a href="">广东</a><a href="">广西</a>
+				<a href="">海南</a><a href="">重庆</a><a href="">四川</a><a href="">贵州</a><a href="">云南</a>
+				<a href="">西藏</a><a href="">陕西</a><a href="">甘肃</a><a href="">青海</a><a href="">宁夏</a>
+				<a href="">新疆</a><a href="">台湾</a><a href="">香港</a><a href="">澳门</a><a href="">钓鱼岛</a>
+			</div>
 			<div id="top-right">
-				<div id="welcome">欢迎光临当当，请<a href="#"><span id="login">登陆</span></a> <a href="#">成为会员</a></div>
+				<div id="welcome">欢迎光临当当，请<a href="#"><span id="login">登陆</span></a> <a href="#" id="vip">成为会员</a></div>
 				<a id="top-market" href="#"><img src="images/smallmarket.png" id="smallmarket"> 购物车<span id="zero">0</span></a>
-				<a href="#" id="top-wright-text">&nbsp;我的订单</a>
-				<a href="#" id="top-wright-text">&nbsp;我的云书房</a>
-				<a href="#" id="top-wright-text">&nbsp;我的当当</a>
-				<a href="#" id="top-wright-text">&nbsp;0元购物</a>
-				<a href="#" id="top-wright-text">&nbsp;小说投稿</a>
-				<a href="#" id="top-wright-text">&nbsp;我要出书</a>
-				<div id="top-wright-text">&nbsp;企业采购</div>
-				<div id="top-wright-text">&nbsp;客户服务</div>
+				<a href="#" class="top-wright-text">&nbsp;我的订单</a>
+				<a href="#" class="top-wright-text">&nbsp;我的云书房</a>
+				<a href="#" class="top-wright-text" id="ll">&nbsp;我的当当<img id="llimg" src="images/down.png" alt=""></a>
+				<a href="#" class="top-wright-text" id="mm">&nbsp;0元领物<img id="mmimg" src="images/down.png" alt=""></a>
+				<a href="#" class="top-wright-text">&nbsp;小说投稿</a>
+				<a href="#" class="top-wright-text">&nbsp;我要出书</a>
+				<div class="wright-text" id="nn">&nbsp;企业采购<img id="nnimg" src="images/down.png" alt=""></div>
+				<div class="wright-text" id="oo">&nbsp;客户服务<img id="ooimg" src="images/down.png" alt=""></div>
 			</div>
 		</div>
 	</div>
 	<div id="head-wrap">
 		<div id="head">
 			<img src="images/logo.gif" alt="">
-			<input type="text">
+			<div id="mydd">
+				<a href="" class="mydd">银铃铛抵现</a>
+				<a href="" class="mydd">我的收藏</a>
+				<a href="" class="mydd">我的余额</a>
+				<a href="" class="mydd">我的评论</a>
+				<a href="" class="mydd">礼券/礼品卡</a>
+			</div>
+			<div id="zeroget">
+				<a href="" class="get">0元领物</a>
+				<a href="" class="get">当当拼团</a>
+				<a href="" class="get">1元砍价</a>
+				<a href="" class="get">1分抽奖</a>
+			</div>
+			<div id="buy">
+				<a href="" class="buyy">大宗采购</a>
+				<a href="" class="buyy">礼品卡采购</a>
+				<a href="" class="buyy">礼品卡激活</a>
+				<a href="" class="buyy">礼品卡使用</a>
+				<a href="" class="buyy">分销/荐购</a>
+				<a href="" class="buyy">礼品卡专区</a>
+			</div>
+			<div id="serve">
+				<a href="" class="servelist">帮助中心</a>
+				<a href="" class="servelist">自助退换货</a>
+				<a href="" class="servelist">自助发票</a>
+				<a href="" class="servelist">联系客服</a>
+				<a href="" class="servelist">我要投诉</a>
+			</div>
+			<input type="text" id="inputtext" value="  3-6岁经典绘本">
 			<a href="" id="search">
 				<img id="mirror" src="images/bigmirror.png" alt="">
 			</a>
 			<a href="#" id="market"><img id="marketimg" src="images/whitemarket.png" alt="">&nbsp;<span id="markettxt">购物车 0</span></a>
 			<a href="#" id="ding">我的订单</a>
-			<div id="hot">热搜： <a href="#"></a></div>
+			<div id="hot">热搜： 
+				<a href="#" class="hot">当当优品</a>
+				<a href="#" class="hot">顾客心理战</a>
+				<a href="#" class="hot">星期六女靴</a>
+				<a href="#" class="hot">人性的弱点</a>
+				<a href="#" class="hot">四大名著</a>
+				<a href="#" class="hot">秒杀1元抢</a>
+				<a href="#" id="ad" class="hot">高级搜索</a>
+			</div>
+			<div class="all">
+				<span>全部商品分类</span>
+				<img src="images/whitedown.png" alt="">
+			</div>
+			<div class="cl">
+				<a href="#">图书</a>
+				<a href="#">电子书</a>
+				<a href="#">网络文学</a>
+				<a href="#">服装</a>
+				<a href="#">运动户外</a>
+				<a href="#">孕婴童</a>
+				<a href="#">家居</a>
+				<a href="#">拍卖</a>
+				<a href="#">食品</a>
+				<a href="#">Apple</a>
+				<a href="#">电器城</a>
+			</div>
+		</div>
+	</div>
+	<img class="hot1" src="images/hot1.gif" alt="">
+<!-- 主体部分 -->
+	<a href="" class="fixed"><img src="images/quan.png" id="fix0" class="fix" alt=""></a>
+	<a href="" class="fixed"><img src="images/1.png" id="fix1" class="fix" alt=""></a>
+	<a href="" class="fixed"><img src="images/2.png" id="fix2" class="fix" alt=""></a>
+	<a href="" class="fixed"><img src="images/3.png" id="fix3" class="fix" alt=""></a>
+	<a href="" class="fixed"><img src="images/4.png" id="fix4" class="fix" alt=""></a>
+	<a href="" class="fixed"><img src="images/5.png" id="fix5" class="fix" alt=""></a>
+	<div id="line"></div>
+	<a href="" class="fixed"><img src="images/6.png" id="fix6" class="fix" alt=""></a>
+	<a href="" class="fixed"><img src="images/7.png" id="fix7" class="fix" alt=""></a>
+	<a href="" class="fixed"><img src="images/8.png" id="fix8" class="fix" alt=""></a>
+	<img src="images/9.png" id="fix9" class="fix" alt="">
+	<img src="images/99.png" id="fix99" class="fix" alt="">
+	<script src="index.js"></script>
+
+	<div id="main-swap">
+		<div id="list">
+			<div class="list"><a href="">图书</a>、<a href="">童书</a></div>
+			<div class="list"><a href="">电子书</a>、<a href="">网络文学</a></div>
+			<div class="list"><a href="">创意文具</a>、<a href="">拍卖</a></div>
+			<div class="list"><a href="">服饰</a>、<a href="">内衣</a></div>
+			<div class="list"><a href="">鞋靴</a>、<a href="">箱包</a></div>
+			<div class="list"><a href="">运动户外</a></div>
+			<div class="list"><a href="">孕</a>、<a href="">婴</a>、<a href="">童</a></div>
+			<div class="list"><a href="">家居</a>、<a href="">家纺</a>、<a href="">汽车</a></div>
+			<div class="list"><a href="">家具</a>、<a href="">家装</a>、<a href="">康体</a></div>
+			<div class="list"><a href="">美妆</a>、<a href="">个人护理</a>、<a href="">成人</a></div>
+			<div class="list"><a href="">食品</a>、<a href="">茶酒</a>、<a href="">生鲜</a></div>
+			<div class="list"><a href="">腕表</a>、<a href="">珠宝饰品</a>、<a href="">眼镜</a></div>
+			<div class="list"><a href="">手机</a>、<a href="">数码</a>、<a href="">电脑办公</a></div>
+			<div class="list"><a href="">家用电器</a></div>
+			<div class="list"><a href="">当当礼品卡</a>、<a href="">生活服务</a></div>
+			<div class="list"><a href="">医疗器械</a></div>
 		</div>
 	</div>
 </body>

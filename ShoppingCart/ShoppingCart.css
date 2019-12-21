@@ -8,9 +8,7 @@
 	margin: 0;
 	padding: 0;
 }
-body{
-	background-color: #f99;
-}
+
 a{
 	text-decoration: none;
 }
@@ -126,11 +124,15 @@ ul,li{
 }
 .box{
 	width: 960px;
-	height: 580px;
+	height: 450px;
 	border: 1px solid #ccc;
-	margin: 100px auto;
+	margin: 20px auto;
 	position: relative;
 	overflow: hidden;
+}
+#tj{
+	font-size: 25px;
+	font-weight:700;
 }
 .slider{
 	width: 6720px;
@@ -139,8 +141,11 @@ ul,li{
 }
 .slide{
 	width: 960px;
+	position: relative;
 	overflow: hidden;
 	float: left;
+	left: 106px;
+	top: 20px;
 }
 .box>span{
 	display: block;
@@ -164,7 +169,7 @@ ul,li{
 }
 .nav{
 	position: absolute;
-	left: 500px;
+	left: 380px;
 	bottom: 20px;
 }
 .nav>li{
@@ -181,10 +186,58 @@ ul,li{
 	color: #fff;
 	background: red;
 }
-#first{
-	color: red;
+.word1{
+	width: 750px;
+	height: 30px;
+	background-color: rgb(243,236,220);
+	text-align:center;
 }
-.first{
-	color: red;
-	background: #ccc;
+#word2{
+	width: 750px;
+	height: 30px;
+	background-color: rgb(62,116,92);
+	text-align:center;
+	color: #fff;
 }
+#word3{
+	width: 750px;
+	height: 30px;
+	background-color: rgb(225,112,80);
+	text-align:center;
+	color: #fff;
+}
+#word4{
+	width: 750px;
+	height: 30px;
+	background-color: rgb(99,24,57);
+	text-align:center;
+	color: #fff;
+}
+.word5{
+	width: 750px;
+	height: 30px;
+	background-color: rgb(194,26,26);
+	text-align:center;
+	color: #fff;
+}
+#buttom{
+	border:2px solid rgb(250,80,0);
+}
+#buttom-word{
+	width: 840;
+	height: 80px;
+	text-align:center;
+	margin-bottom: 80px;
+}
+#b1{
+	display: inline-block;
+	color: #ccc;
+}
+#logolast{
+	display: inline-block;
+}
+#b2{
+	display: inline-block;
+	color: #ccc;
+}
+
