@@ -27,13 +27,15 @@
 .three{
 	
 }
+body{
+	background-image: url(images/back.jpg);
+}
 .box{
 			width: 400px;
 			height: 500px;
 			padding: 0 20px;
 			margin: 50px auto;
-			
-			position: absolute;
+			position: absolute; 
 			left: 500px;
 			top: 100px;
 		}
