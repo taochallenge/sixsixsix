@@ -3,40 +3,133 @@
 <head>
 	<title></title>
 	<style type="text/css">
+	   *{margin:0; padding:0;}
 		a{
 			text-decoration: none;
 		}
 		.main{
 			width: 1200px;
-			text-align:center;
+			margin: 0 auto;
 		}
-		.img1{
-			width: 1000px;
+		.img{
+			width: 1200px;
+			height: 80px;
 		}
 		#title{
 			text-align:left;
-			font-size: 120%;
+			font-size: 80%;
 		}
 		.title>a{
 			color: #000000;
-
+      font-size: 120%;
 		}
 		.first{
 			font-weight:bold;	
 		}
-
+		.shop{
+			width:1200px;
+			height: 100px;
+        }
+	 #bigger{width:1000px;height:1000px;position:absolute;float: left;border: 1px solid #000; }
+   #img1{width:400px;height:400px;position:absolute;left:0;top:0;float: right;}
+   #slider{width:200px;height:200px;position:absolute;left:0;top:0;background:#CCC;opacity:0.4;cursor: move;display:none; filter:alpha(opacity=60);}
+   #img2{position:absolute;right:0;top:0;width:400px;height:400px;overflow:hidden;float: none;border: 1px solid #000;}
+   #Bimg{position:absolute;left:0;top:0;}
+   #word{
+   	width: 600px;
+   	height: 800px;
+   	float:right;
+   }
 	</style>
 </head>
 <body>
 <div class="main">
-	<div class="img1">
-		<img  src="img/img1.PNG">
+	<div >
+		<img  class="img" src="img/img1.PNG">
 	</div>
 	<div id="title">
 		<span class="title">
 			<a class="first" href="#"> 家具家居 </a>><a href="#"> 家具 </a>><a href="#"> 儿童学习座椅 </a>><a href="#"> 爱果乐儿童学习座椅 </a>>爱果乐儿童学习桌小学生书桌  实木 写字桌椅套装可升降  课桌椅家...
 	</div>
+	<div id=shop>
+	<div id="bigger">
+	  <div id="img1">
+    <img src="img/img4.PNG" width="400" height="400" id="Simg"/>
+    <div id="slider"></div>
+    </div>
+    <div id="img2">
+    <img src="img/img4.PNG"  id="Bimg"/>
+    </div>
+     <div id="word">
+    	<p>ksdnfjksdvsdjdssssssssssssssssssssssssssssssssssssssssssss</p>
+    </div>
+	</div>
+   
+	</div>
 </div>
 </body>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+  var bigger = document.getElementById('bigger');
+  var img1 = document.getElementById('img1');
+  var Smig = document.getElementById('Simg');
+  var slider = document.getElementById('slider');
+  var img2 = document.getElementById('img2');
+  var Bimg = document.getElementById('Bimg');
+  img1.onmouseover = function(){
+    img2.style.float="left";
+    slider.style.display = "block";
+    img2.style.display = "block";
+  }
+  img1.onmouseout = function (){
+     img2.style.float="none";
+      img2.style.display = "none";
+     slider.style.display = "none";
+  }
+  img1.onmousemove = function(e){
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+    var biggerLeft = bigger.offsetLeft;
+    var biggerTop = bigger.offsetTop;
+    var sliderWidth = slider.offsetWidth;
+    var sliderHeight = slider.offsetHeight;
+    // if(mouseX<374){
+    //   mouseX=374;
+    // }
+    //  if(mouseX>495){
+    //   mouseX=495;
+    // }
+    //  if(mouseY<196){
+    //   mouseY=196;
+    // }
+    //  if(mouseY>312){
+    //   mouseY=312;
+    // }
+    var sliderLeft = mouseX - biggerLeft -sliderWidth/2;
+    var sliderTop = mouseY - biggerTop -sliderHeight/2;
+    slider.style.left = sliderLeft +"px";
+    slider.style.top = sliderTop +"px";
+    if(sliderLeft<=0){
+      //左侧临界值
+      slider.style.left = 0;
+    }
+    else if(sliderLeft>=(img1.offsetWidth-slider.offsetWidth)){
+      //右侧临界值
+      slider.style.left = img1.offsetWidth-slider.offsetWidth + "px";
+    }
+    if(sliderTop<=0){
+      //左侧临界值
+      slider.style.top = 0;
+    }
+    else if(sliderTop>=(img1.offsetHeight-slider.offsetHeight)){
+      //右侧临界值
+      slider.style.top = img1.offsetHeight-slider.offsetHeight + "px";
+    }
+
+    var percent = Bimg.offsetWidth/Simg.offsetWidth;//设定大小比例
+    //大图到左侧的距离是一个负值
+    Bimg.style.left = (-sliderLeft * percent) + "px";
+    Bimg.style.top = (-sliderTop * percent) + "px";
+
+  }
+</script>
 </html>
