@@ -221,7 +221,24 @@ market.onmouseout=function(){
 	market.style.backgroundColor = "rgb(255,40,50)";
 	markettxt.style.color = "rgb(246,246,246)";
 }
+//顶部
+var zindex = document.getElementsByClassName("zindex");
+for(var i=0;i<zindex.length;++i){
+	zindex[i].onclick = function(){
+		var name = this.getAttribute("id").slice(-1);
+		zindex[name].style.paddingTop = "160px";
+		zindex[name].style.left = "400px";
+		zindex[name].style.zIndex = "3";
+		zindex[(name+1)%zindex.length].style.paddingTop = "5px";
+		zindex[(name+1)%zindex.length].style.zIndex = "2";
+		zindex[(name+1)%zindex.length].style.left = "1000px";
+		zindex[(name+2)%zindex.length].style.paddingTop = "5px";
+		zindex[(name+2)%zindex.length].style.left = "-100px";
+		zindex[(name+2)%zindex.length].style.zIndex = "1";
+	}
+}
 
+//按钮
 var homenav = document.getElementById("home_nav");
 	var erweima = document.getElementById("erweima");
 	var timebig = document.getElementsByClassName("time_big");
@@ -291,3 +308,14 @@ var homenav = document.getElementById("home_nav");
 			}
 		}
 	}
+var code = document.getElementById("code");
+var moveimg = document.createElement("img");
+moveimg.src = "images/erweima.jpg"
+code.onmouseover = function(){
+	code.appendChild(moveimg);
+	animate(moveimg,{left:400,width:500,height:500});
+}
+moveimg.onclick = function(){
+	animate(moveimg,{left:1400,width:0,height:0});	
+}
+
