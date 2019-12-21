@@ -2,7 +2,7 @@
 * @Author: taochallenge
 * @Date:   2019-12-17 17:57:57
 * @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-20 22:50:03
+* @Last Modified time: 2019-12-21 11:08:37
 */
 // 头部部分
 var destination = document.getElementById("destination");
@@ -186,3 +186,59 @@ market.onmouseout=function(){
 	market.style.backgroundColor = "rgb(255,40,50)";
 	markettxt.style.color = "rgb(246,246,246)";
 }
+// 主体部分
+var fixList = document.getElementsByClassName("fix");
+fixList[1].onmouseover=function(){
+	this.src = "images/11.png";
+}
+fixList[1].onmouseout=function(){
+	this.src = "images/1.png";
+}
+fixList[2].onmouseover=function(){
+	this.src = "images/22.png";
+}
+fixList[2].onmouseout=function(){
+	this.src = "images/2.png";
+}
+fixList[3].onmouseover=function(){
+	this.src = "images/33.png";
+}
+fixList[3].onmouseout=function(){
+	this.src = "images/3.png";
+}
+fixList[4].onmouseover=function(){
+	this.src = "images/44.png";
+}
+fixList[4].onmouseout=function(){
+	this.src = "images/4.png";
+}
+fixList[5].onmouseover=function(){
+	this.src = "images/55.png";
+}
+fixList[5].onmouseout=function(){
+	this.src = "images/5.png";
+}
+fixList[6].onmouseover=function(){
+	this.src = "images/66.png";
+	fixList[10].style.display = "block"; 
+}
+fixList[6].onmouseout=function(){
+	this.src = "images/6.png";
+	fixList[10].style.display = "none";
+}
+fixList[7].onmouseover=function(){
+	this.src = "images/77.png";
+}
+fixList[7].onmouseout=function(){
+	this.src = "images/7.png";
+}
+fixList[8].onmouseover=function(){
+	this.src = "images/88.png";
+}
+fixList[8].onmouseout=function(){
+	this.src = "images/8.png";
+}
+
+var list = document.getElementById("list");
+var lists = document.getElementsByClassName("list");
+

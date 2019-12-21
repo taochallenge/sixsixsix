@@ -2,7 +2,7 @@
 * @Author: taochallenge
 * @Date:   2019-12-17 17:58:12
 * @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-20 22:48:55
+* @Last Modified time: 2019-12-21 11:05:37
 */
 /* 头部部分 */
 *{
@@ -240,11 +240,86 @@ input:focus{
 	left: 230px;
 }
 .cl a{
-	margin-right: 23px;
+	margin-right: 25px;
 	color: #000;
 	font-weight: bold;
 	font-size: 15px;
 }
 .cl a:hover{
 	color: red;
+}
+.hot1{
+	position: absolute;
+	top:135px;
+	left: 875px;
+}
+/* 中间部分 */
+.fix{
+	position: fixed;
+	right: 0;
+}
+#fix0{
+	top: 0;
+}
+#fix1{
+	top: 135px;
+}
+#fix2{
+	top: 169px;
+}
+#fix3{
+	top: 203px;
+}
+#fix4{
+	top: 237px;
+}
+#fix5{
+	top: 271px;
+}
+#line{
+	position: fixed;
+	top: 305px;
+	right: 0;
+	height: 281px;
+	width: 4px;
+	background-color: rgb(71, 71, 71);
+}
+#fix6{
+	bottom: 102px;
+}
+#fix7{
+	bottom: 68px;
+}
+#fix8{
+	bottom: 34px;
+}
+#fix9{
+	bottom: 0;
+}
+#fix99{
+	display: none;
+	position: fixed;
+	top: 580px;
+	right:34px;
+}
+.fixed{
+	display: block;
+}
+#main-swap{
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+}
+#list{
+	width: 200px;
+	background-color: rgb(250,250, 250)
+}
+#list a{
+	font-size: 13.5px;
+	color: rgb(50, 50, 50);
+}
+.list{
+	height: 27px;
+	text-indent: 15px;
+	line-height: 27px;
 }
