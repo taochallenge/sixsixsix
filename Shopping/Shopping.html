@@ -30,13 +30,13 @@
 			width:1200px;
 			height: 100px;
         }
-	 #bigger{width:1000px;height:1000px;position:absolute;float: left;border: 1px solid #000; }
-   #img1{width:400px;height:400px;position:absolute;left:0;top:0;float: right;}
+	 #bigger{width:800px;height:1000px;position:absolute;float: left; }
+   #img1{width:400px;height:400px;position:absolute;left:0;top:0;float:left;}
    #slider{width:200px;height:200px;position:absolute;left:0;top:0;background:#CCC;opacity:0.4;cursor: move;display:none; filter:alpha(opacity=60);}
-   #img2{position:absolute;right:0;top:0;width:400px;height:400px;overflow:hidden;float: none;border: 1px solid #000;}
-   #Bimg{position:absolute;left:0;top:0;}
+   #img2{position:absolute;right:0;top:0;width:400px;height:400px;overflow:hidden;display: none;border: 1px solid #000;}
+   #Bimg{position:absolute;left:0;top:0;width:800px;height:800px;}
    #word{
-   	width: 600px;
+   	width: 800px;
    	height: 800px;
    	float:right;
    }
@@ -60,10 +60,11 @@
     <div id="img2">
     <img src="img/img4.PNG"  id="Bimg"/>
     </div>
+    </div>
      <div id="word">
     	<p>ksdnfjksdvsdjdssssssssssssssssssssssssssssssssssssssssssss</p>
     </div>
-	</div>
+	
    
 	</div>
 </div>
@@ -92,18 +93,19 @@
     var biggerTop = bigger.offsetTop;
     var sliderWidth = slider.offsetWidth;
     var sliderHeight = slider.offsetHeight;
-    // if(mouseX<374){
-    //   mouseX=374;
-    // }
-    //  if(mouseX>495){
-    //   mouseX=495;
-    // }
-    //  if(mouseY<196){
-    //   mouseY=196;
-    // }
-    //  if(mouseY>312){
-    //   mouseY=312;
-    // }
+    console.log(mouseX,mouseY);
+    if(mouseX<217){
+      mouseX=217;
+    }
+     if(mouseX>413){
+      mouseX=413;
+    }
+     if(mouseY<206){
+      mouseY=206;
+    }
+     if(mouseY>406){
+      mouseY=406;
+    }
     var sliderLeft = mouseX - biggerLeft -sliderWidth/2;
     var sliderTop = mouseY - biggerTop -sliderHeight/2;
     slider.style.left = sliderLeft +"px";
