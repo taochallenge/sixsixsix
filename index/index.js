@@ -2,7 +2,7 @@
 * @Author: taochallenge
 * @Date:   2019-12-17 17:57:57
 * @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-21 11:08:37
+* @Last Modified time: 2019-12-21 20:50:58
 */
 // 头部部分
 var destination = document.getElementById("destination");
@@ -239,6 +239,211 @@ fixList[8].onmouseout=function(){
 	this.src = "images/8.png";
 }
 
-var list = document.getElementById("list");
-var lists = document.getElementsByClassName("list");
 
+
+var box = document.getElementById("box");
+var oNavlist = document.getElementById("nav").children;
+var slider = document.getElementById("slider");
+var left = document.getElementById("left");
+var right = document.getElementById("right");
+var index = 1;
+var timer;
+var isMoving = false;
+var iHidden = 0,iShow = 0;//iHidden表示隐藏的下标，iShow表示显示的下标
+
+// 轮播图
+function getStyle(obj, attr){
+	if(obj.currentStyle){
+		return obj.currentStyle[attr];
+	} else {
+		return getComputedStyle(obj, null)[attr];
+	}
+}
+function animate(obj,json,callback){
+	clearInterval(obj.timer);
+	obj.timer = setInterval(function(){
+		var isStop = true;
+		for(var attr in json){
+			var now = 0;
+			if(attr == 'opacity'){
+				now = parseInt(getStyle(obj,attr)*100);
+			}else{
+				now = parseInt(getStyle(obj,attr));
+			}
+			var speed = (json[attr] - now) / 8;
+			speed = speed>0?Math.ceil(speed):Math.floor(speed);
+			var cur = now + speed;
+			if(attr == 'opacity'){
+				obj.style[attr] = cur / 100;
+			}else{
+				obj.style[attr] = cur + 'px';
+			}
+			if(json[attr] !== cur){
+				isStop = false;
+			}
+		}
+		if(isStop){
+			clearInterval(obj.timer);
+			callback&&callback();
+		}
+	}, 30)
+}
+
+//点右箭头触发的函数
+function next(){
+	if(isMoving){
+		return;
+	}
+	isMoving = true;
+	index++;
+	btnChange();
+	animate(slider,{left:-796*index},function(){
+		if(index == 9){
+			slider.style.left = "-796px";
+			index = 1;
+		}
+		isMoving = false;
+	});	
+}
+//点左箭头触发的函数
+function prev(){
+	if(isMoving){
+		return;
+	}
+	isMoving = true;
+	index--;
+	btnChange();
+	animate(slider,{left:-796*index},function(){
+		if(index == 0){
+			slider.style.left = -796*8 + "px";
+			index = 8;
+		}
+		isMoving = false;
+	});
+}
+var timer = setInterval(next,3000);
+
+box.onmouseover = function(){
+	animate(left,{opacity:50});
+	animate(right,{opacity:50});
+	clearInterval(timer);
+}
+box.onmouseout = function(){
+	animate(left,{opacity:0});
+	animate(right,{opacity:0});
+	timer = setInterval(next,2000);
+}
+right.onclick = next;
+left.onclick = prev;
+
+//小按钮点击
+for(var i=0; i<oNavlist.length; i++){
+	oNavlist[i].idx = i;
+	oNavlist[i].onmouseover = function(){
+		index = this.idx + 1;
+		btnChange();
+		animate(slider,{left:-796*index});
+	}
+}
+
+//小按钮背景色切换
+function btnChange(){
+	for(var i=0; i<oNavlist.length; i++){			
+		oNavlist[i].className = "";
+	}
+	if(index == 9){
+		oNavlist[0].className = "active";
+	}
+	else if(index == 0){
+		oNavlist[7].className = "active";
+	}
+	else{
+		oNavlist[index-1].className = "active";
+	}
+}
+
+var slide1List = document.getElementsByClassName("slide1");
+var box2 = document.getElementById("box2");
+var slider1 = document.getElementById("slider1");
+
+function next1(){
+	var now = parseInt(getStyle(slide1List[0],"left"));
+	var speed = 1;
+	if(now == -796){
+		slide1List[0].style.left = 796 + "px";
+	}
+	else{
+		slide1List[0].style.left = now - speed + "px";
+	}
+}
+function next2(){
+	var now1 = parseInt(getStyle(slide1List[1],"left"));
+	var speed = 1;
+	if(now1 == -796){
+		slide1List[1].style.left = 796 + "px";
+	}
+	else{
+		slide1List[1].style.left = now1 - speed + "px";
+	}
+}
+var id1 = setInterval(next1,30);
+var id2 = setInterval(next2,30);
+slider1.onmouseover=function(){
+	clearInterval(id1);
+	clearInterval(id2);
+}
+slider1.onmouseout=function(){
+	id1 = setInterval(next1,30);
+	id2 = setInterval(next2,30);
+}
+
+// 消息向上滚动
+var messagetxt = document.getElementById("messagetxt");
+var mms = document.getElementById("mms");
+var t;
+auto();
+function auto(){
+	t = setInterval(function(){
+		var now = parseInt(getStyle(messagetxt,"top"));
+		var speed = 1;
+		if(now==-245){
+			messagetxt.style.top = 0 + "px";
+		}
+		else{
+			messagetxt.style.top = now - speed + "px";
+		}
+	},30)
+}
+mms.onmouseover=function(){
+	clearInterval(t);
+}
+mms.onmouseout=function(){
+	auto();
+}
+
+// 活动
+var actimg = document.getElementsByClassName("actimg");
+actimg[0].onmouseover=function(){
+	this.src = "images/a11.png";
+}
+actimg[0].onmouseout=function(){
+	this.src = "images/a1.png";
+}
+actimg[1].onmouseover=function(){
+	this.src = "images/a22.png";
+}
+actimg[1].onmouseout=function(){
+	this.src = "images/a2.png";
+}
+actimg[2].onmouseover=function(){
+	this.src = "images/a33.png";
+}
+actimg[2].onmouseout=function(){
+	this.src = "images/a3.png";
+}
+actimg[3].onmouseover=function(){
+	this.src = "images/a44.png";
+}
+actimg[3].onmouseout=function(){
+	this.src = "images/a4.png";
+}
