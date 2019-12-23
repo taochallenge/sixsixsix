@@ -474,3 +474,42 @@ input:focus{
 	display: inline-block;
 	margin-right: 5px;
 }
+.footer{
+	background-color: pink;
+	height: 150px;
+	position: absolute;
+	top: 1200px;
+	width: 1200px;
+	left: 156px;
+	height: 280px;
+}
+.footer div{
+	width: 90px;
+	display: inline-block;
+	margin-top: 15px;
+	margin-left:180px;		
+}
+.footer a{
+	color: rgb(30,41,61);
+}
+.size{
+	font-size: 14px;
+}
+.copyright{
+	position: absolute;
+	top: 1400px;
+	left: 400px;
+	border-top:1px solid #454545;
+	height: 97px;
+	text-align: center;
+	color:rgb(30,41,61);
+	font-size: 14px;
+}
+.copyright a{
+	color: rgb(30,41,61);
+}
+.true{
+	position: absolute;
+	top: 1090px;
+	left: 156px;
+}
