@@ -18,6 +18,7 @@
 		#title{
 			text-align:left;
 			font-size: 80%;
+      margin-bottom: 10px;
 		}
 		.title>a{
 			color: #000000;
@@ -26,19 +27,62 @@
 		.first{
 			font-weight:bold;	
 		}
-		.shop{
-			width:1200px;
-			height: 100px;
-        }
-	 #bigger{width:800px;height:1000px;position:absolute;float: left; }
+		.image{
+			width:400px;
+			height: 1000px;
+      float: left;
+      }
+	 #bigger{width:800px;height:800px;position:absolute; }
    #img1{width:400px;height:400px;position:absolute;left:0;top:0;float:left;}
    #slider{width:200px;height:200px;position:absolute;left:0;top:0;background:#CCC;opacity:0.4;cursor: move;display:none; filter:alpha(opacity=60);}
-   #img2{position:absolute;right:0;top:0;width:400px;height:400px;overflow:hidden;display: none;border: 1px solid #000;}
+   #img2{position:absolute;right:0;top:0;width:400px;height:400px;overflow:hidden;display: none; z-index:9;}
    #Bimg{position:absolute;left:0;top:0;width:800px;height:800px;}
+   #imgs{
+    height: 50px;
+    width: 400px;
+    margin-top:10px;
+    margin-bottom: 10px ;
+    position:relative;
+    left:0;
+    top:400px; 
+   }
+   #imgs>div{
+    margin-left: 25px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+   }
+   #imgs>div>img{
+    height: 50px;
+    width: 50px;
+   }
+   #price{
+    margin-left: 20px;
+   	width: 600px;
+   	height: 1000px;
+   	float:left;
+   }
    #word{
-   	width: 800px;
-   	height: 800px;
-   	float:right;
+    margin-top:10px; 
+    height:40px;
+    font-weight: bold;
+    font-size: 120%;
+   }
+   #comment{
+    display:block;
+    font-size: 80%;
+
+   }
+   #shop{
+    width: 800px;
+    height: 800px;
+    float: right;
+   }
+   #right{
+    width: 170px;
+    height: 400px;
+    border: 1px solid #000;
+    float: right;
    }
 	</style>
 </head>
@@ -51,7 +95,7 @@
 		<span class="title">
 			<a class="first" href="#"> 家具家居 </a>><a href="#"> 家具 </a>><a href="#"> 儿童学习座椅 </a>><a href="#"> 爱果乐儿童学习座椅 </a>>爱果乐儿童学习桌小学生书桌  实木 写字桌椅套装可升降  课桌椅家...
 	</div>
-	<div id=shop>
+	<div id="image">
 	<div id="bigger">
 	  <div id="img1">
     <img src="img/img4.PNG" width="400" height="400" id="Simg"/>
@@ -60,13 +104,27 @@
     <div id="img2">
     <img src="img/img4.PNG"  id="Bimg"/>
     </div>
+    <div id="imgs">
+      <div><img src="img/img4.PNG"></div>
+      <div><img src="img/img4.PNG"></div>
+      <div><img src="img/img4.PNG"></div>
+      <div><img src="img/img4.PNG"></div>
+      <div><img src="img/img4.PNG"></div>
     </div>
-     <div id="word">
-    	<p>ksdnfjksdvsdjdssssssssssssssssssssssssssssssssssssssssssss</p>
     </div>
-	
-   
 	</div>
+  <div id="shop">
+      <div id="price">
+      <div id="word"><p>爱果乐儿童学习桌小学生书桌 实木 写字桌椅套装可升降 课桌椅家用</p></div>
+      <div id="comment">
+        <img src="img/skr.PNG">
+        <a href="#">390</a>条评论
+      </div>
+      </div>
+      <div id="right">
+      
+      </div>
+  </div>
 </div>
 </body>
 <script type="text/javascript">
@@ -93,15 +151,14 @@
     var biggerTop = bigger.offsetTop;
     var sliderWidth = slider.offsetWidth;
     var sliderHeight = slider.offsetHeight;
-    console.log(mouseX,mouseY);
     if(mouseX<217){
       mouseX=217;
     }
      if(mouseX>413){
       mouseX=413;
     }
-     if(mouseY<206){
-      mouseY=206;
+     if(mouseY<220){
+      mouseY=220;
     }
      if(mouseY>406){
       mouseY=406;
