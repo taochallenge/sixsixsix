@@ -72,73 +72,14 @@ for(var i = 0;i < oNavlist.length;i++){
 		}
 		
 	}
-
-/* ********************************************************************* */
-
-// var oNavlists = document.getElementById('navs').children;
-// var sliders = document.getElementById('sliders');
-// var lefts= document.getElementById("lefts");
-// var rights = document.getElementById("rights");
-// var slides = document.getElementsByClassName('slides');
-// var indexs = 1;
-// 	//轮播下一张函数
-// 	function nexts(){
-// 		indexs++;
-// 		navChanges();
-// 		animate(sliders,{left:-680* indexs},function(){
-// 			if(indexs === 4){
-// 				sliders.style.left = "-675x";
-// 				indexs = 1;
-// 			}
-// 		});
-// 	}
-
-// 	function prevs(){
-// 		indexs--;
-// 		navChanges();
-// 		animate(sliders,{left:-680 * indexs},function(){
-// 			if(indexs === 0){
-// 				sliders.style.left = "-3375px";
-// 				indexs = 4;
-// 			}
-// 		});
-// 	}
-
-// 	var timers = setInterval(nexts,3000);
-// //鼠标滑入清定时器
-// boxs.onmouseover = function(){
-// 	animate(lefts,{opacity:50})
-// 	animate(rights,{opacity:50})
-// 	clearInterval(timers);
-// }
-// //鼠标划出开定时器
-// boxs.onmouseout = function(){
-// 	animate(lefts,{opacity:0})
-// 	animate(rights,{opacity:0})
-// 	timers = setInterval(nexts,3000);
-// }
-// rights.onclick = nexts;
-// lefts.onclick = prevs;
-// for(var is = 0;is < oNavlists.length;is++){
-// 	oNavlists[is].idx = is;
-// 	oNavlists[is].onclick = function(){
-// 		indexs = this.idx + 1;
-// 		navChanges();
-// 		animate(sliders,{left:-680*indexs});
-// 	}
-// }
-
-// 	//小按钮背景色切换
-// 	function navChanges(){
-// 		for(var is = 0;is<oNavlists.length;is++){
-// 			oNavlists[is].id = '';
-// 		}
-// 		if(indexs === 4){
-// 			oNavlists[0].id = 'actives';
-// 		}else if(indexs===0){
-// 			oNavlists[2].id = 'actives';
-// 		}else{
-// 			oNavlists[indexs-1].id = 'actives';
-// 		}
-		
-// 	}
+/********************************************************************/
+var btn3=document.getElementById("btn3");
+var btn2=document.getElementById("btn1");
+btn2.onclick=function(){
+	alert("请登录微信公众号参与活动");
+}
+btn3.onclick=function(){
+	prompt("请输入要反馈的内容：");
+	alert("反馈成功");
+}
+/************************************************************************/
