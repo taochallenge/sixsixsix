@@ -40,6 +40,17 @@ function animate(obj,json,callback){
 		}
 	}, 30)
 }
+
+function change(){
+	var b = confirm("您要切换成护眼模式吗？");
+	if(b){
+		var body = document.getElementsByTagName("body");
+		body[0].style.backgroundColor = "#e3c887";
+	}
+}
+window.onload = function(){
+	setTimeout(change,1200);
+}
 var destination = document.getElementById("destination");
 var desimg = document.getElementById("desimg");
 var des = document.getElementById("des");
@@ -223,18 +234,30 @@ market.onmouseout=function(){
 }
 //顶部
 var zindex = document.getElementsByClassName("zindex");
-for(var i=0;i<zindex.length;++i){
-	zindex[i].onclick = function(){
-		var name = this.getAttribute("id").slice(-1);
-		zindex[name].style.paddingTop = "160px";
-		zindex[name].style.left = "400px";
-		zindex[name].style.zIndex = "3";
-		zindex[(name+1)%zindex.length].style.paddingTop = "5px";
-		zindex[(name+1)%zindex.length].style.zIndex = "2";
-		zindex[(name+1)%zindex.length].style.left = "1000px";
-		zindex[(name+2)%zindex.length].style.paddingTop = "5px";
-		zindex[(name+2)%zindex.length].style.left = "-100px";
-		zindex[(name+2)%zindex.length].style.zIndex = "1";
+zindex[0].onclick = function(s){
+	animate(this,{top:40,left:50,width:1600,height:500});
+	this.onclick = function(){
+		animate(this,{width:800,height:300,top:230,left:400});
+	}
+}
+zindex[1].onclick = function(){
+	this.style.zIndex="3";
+	zindex[0].style.zIndex="0";
+	animate(this,{top:200,left:50,width:1600,height:500});
+	this.onclick = function(){
+		animate(this,{width:800,height:300,top:220,left:870});
+		zindex[0].style.zIndex="3";
+		this.style.zIndex="0";
+	}
+}
+zindex[2].onclick = function(){
+	zindex[0].style.zIndex="0";
+	this.style.zIndex="3";
+	animate(this,{top:200,left:50,width:1600,height:500});
+	this.onclick = function(){
+		animate(this,{top:220,left:10,width:800,height:300});
+		zindex[0].style.zIndex="3";
+		this.style.zIndex="0";
 	}
 }
 
@@ -299,6 +322,7 @@ var homenav = document.getElementById("home_nav");
 		tabh_0[i].onmouseover = function(){
 			var str = this.id.slice(1);
 			for(var j=0;j<tali_1.length;++j){
+				this.style.backgroundColor="pink";
 				if(str==j){
 					tali_1[j].style.display = "block";
 				}
@@ -306,6 +330,9 @@ var homenav = document.getElementById("home_nav");
 					tali_1[j].style.display = "none";
 				}
 			}
+		}
+		tabh_0[i].onmouseout=function(){
+			this.style.backgroundColor="#E58308"
 		}
 	}
 var code = document.getElementById("code");
