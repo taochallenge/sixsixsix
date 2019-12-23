@@ -20,7 +20,7 @@ a:hover{
 }
 body{
 	/*background-image: url(images/background.jpg);*/
-	background-color: #e3c887;
+	/*background-color: #e3c887;*/
 	opacity: 1.5;
 	background-repeat: no-repeat;
 }
@@ -276,7 +276,7 @@ input:focus{
 }
 .z-index{
 	/*background-color: rgb(35,235,185);*/
-	width: 100%;
+	width: 1000px;
 	height: 460px;
 	margin: 0 auto;
 	margin-top: 20px;
@@ -284,6 +284,7 @@ input:focus{
 	overflow: hidden;
 }
 .z-index img{
+	cursor: pointer;
 	width: 800px;
 	height: 300px;
 }
@@ -296,17 +297,13 @@ input:focus{
 #z-index1{
 	padding-top: 5px;
 	position: absolute;
-	z-index: 2;
-	left: 1000px;
-	/*display: inline-block;*/
+	left: 870px;
 }
 
 #z-index2{
 	padding-top: 5px;
 	position: absolute;
-	left: -100px;
-	z-index: 1;
-	/*display: inline-block;*/
+	left: 10px;
 }
 
 .titlenav{
