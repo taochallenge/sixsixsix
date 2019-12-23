@@ -3,10 +3,250 @@
 <head>
 	<title></title>
 	<style type="text/css">
-	   *{margin:0; padding:0;}
-		a{
-			text-decoration: none;
-		}
+	  *{margin:0; padding:0;}
+		a{text-decoration: none;}
+    ul li{list-style: none;}
+#top-wrap{
+  height: 35px;
+  background-color: rgb(249,249, 249);
+}
+#top{
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 13px;
+}
+#destination{
+  display: block;
+  color: rgb(100, 100, 100);
+  width: 80px;
+  height: 33px;
+  margin-bottom: -1px;
+  border-bottom: white;
+}
+#des{
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 240px;
+  border: 1px solid red;
+  background-color: white;
+  z-index: 999;
+  border: 1px solid rgb(230, 230, 230);
+}
+#des a{
+  font-size: 12px;
+  color: rgb(100, 100, 100);
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-bottom: -10px;
+}
+#top-right{
+  position: absolute;
+  top: 0;
+  left: 390px;
+  float: right;
+}
+#top-right a{
+  height: 20px;
+  display: inline-block;
+  color: rgb(100, 100, 100);
+}
+#login{
+  color: red;
+}
+#vip:hover{
+  color: red;
+}
+#welcome{
+  float: left;
+}
+#zero{
+  color: red;
+}
+#smallmarket{
+  position: relative;
+  top: 5px;
+}
+#top-market:hover{
+  color: red;
+}
+.top-wright-text{
+  height: 15px;
+  line-height: 10px;
+  display: inline-block;
+}
+.wright-text{
+  height: 20px;
+  line-height: 10px;
+  display: inline-block;
+}
+#head-wrap{
+  height: 142px;
+  border-bottom:2px solid rgb(255,40,50);
+}
+#mydd{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 794px;
+  width: 70px;
+  height: 120px;
+  z-index: 999;
+  background-color: rgb(249,249, 249);
+}
+.mydd,.get,.buyy,.servelist{
+  color: rgb(100, 100, 100);
+  font-size: 12px;
+  text-indent: 4px;
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+}
+#zeroget{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 864px;
+  width: 70px;
+  height: 100px;
+  z-index: 999;
+  background-color: rgb(249,249, 249);
+}
+#buy{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 1050px;
+  width: 70px;
+  z-index: 999;
+  height: 150px;
+  background-color: rgb(249,249, 249);
+}
+#serve{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 1125px;
+  width: 70px;
+  z-index: 999;
+  height: 120px;
+  background-color: rgb(249,249, 249);
+}
+#head{
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+input{
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  position: absolute;
+  left: 400px;
+  top: 25px;
+  width: 500px;
+  height: 35px;
+  border: 2px solid rgb(255,40,50);
+}
+input:focus{
+  outline: none;
+}
+#search{
+  display: block;
+  height: 39px;
+  width: 42px;
+  background-color: rgb(255,40,50);
+  position: absolute;
+  top: 25px;
+  left: 900px;
+  text-align: center;
+}
+#mirror{
+  margin-top: 2px;
+}
+#market{
+  color: white;
+  width: 100px;
+  height: 39px;
+  background-color: rgb(255,40,50);
+  position: absolute;
+  top: 25px;
+  left: 1000px;
+}
+#marketimg{
+  margin-top: 2px;
+}
+#markettxt{
+  position: absolute;
+  top: 9px;
+  font-size: 15px;
+}
+#ding{
+  width: 100px;
+  height: 39px;
+  position: absolute;
+  top: 25px;
+  left: 1100px;
+  background-color: rgb(246,246, 246);
+  text-align: center;
+  line-height: 39px;
+  color: rgb(100,100,100);
+}
+#ding:hover{
+  color: red;
+}
+#hot{
+  font-size: 12px;
+  color: rgb(150, 150, 150);
+  position: absolute;
+  left: 400px;
+  top: 70px;
+}
+#hot a{
+  color: rgb(150, 150, 150);
+  display: inline-block;
+  margin-right: 10px;
+}
+#ad{
+  margin-left: 42px;
+}
+.all{
+  position: absolute;
+  top: 102px;
+  color: white;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgb(250, 40, 50);
+}
+.all span{
+  margin-left: 20px;
+}
+.all img{
+  margin-left: 40px;
+}
+.cl{
+  position: absolute;
+  top: 110px;
+  left: 230px;
+}
+.cl a{
+  margin-right: 25px;
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+}
+.cl a:hover{
+  color: red;
+}
+.hot1{
+  position: absolute;
+  top:135px;
+  left: 875px;
+}
 		.main{
 			width: 1200px;
 			margin: 0 auto;
@@ -36,7 +276,7 @@
    #img1{width:400px;height:400px;position:absolute;left:0;top:0;float:left;}
    #slider{width:200px;height:200px;position:absolute;left:0;top:0;background:#CCC;opacity:0.4;cursor: move;display:none; filter:alpha(opacity=60);}
    #img2{position:absolute;right:0;top:0;width:400px;height:400px;overflow:hidden;display: none; z-index:9;}
-   #Bimg{position:absolute;left:0;top:0;width:800px;height:800px;}
+   #Bimg{position:absolute;left:0;top:0px;width:800px;height:800px;}
    #imgs{
     height: 50px;
     width: 400px;
@@ -58,7 +298,7 @@
    }
    #price{
     margin-left: 20px;
-   	width: 600px;
+   	width: 590px;
    	height: 1000px;
    	float:left;
    }
@@ -66,30 +306,208 @@
     margin-top:10px; 
     height:40px;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 110%;
    }
    #comment{
     display:block;
     font-size: 80%;
-
    }
    #shop{
     width: 800px;
-    height: 800px;
+    height: 1000px;
     float: right;
    }
-   #right{
-    width: 170px;
-    height: 400px;
-    border: 1px solid #000;
-    float: right;
-   }
+      #right-tops{
+      width: 180px;
+      height: 400px;
+      float: right;
+    }
+    #title1{
+      width: 180px;
+      height: 30px;
+      float: left;
+    }
+    #title1>img{
+      float: left;
+    }
+    #title1>span{
+      width: 130px;
+      height: 30px;
+      line-height: 30px;
+      float: left;
+    }
+    #title2{
+      height: 25px;
+      width: 180px;
+      float: left;
+      font-size: 80%;
+    }
+    #title2>span{
+      width: 180px;
+      height: 25px;
+      font-size: 120%;
+      color: red;
+    }
+    #title3{
+      width: 180px;
+      height: 40px;
+      float: left;
+    }
+    #title3>img{
+      width: 180px;
+      height: 40px;
+    }
+    #title4{
+      height: 30px;
+      width: 180px;
+      margin-top: 10px;
+      float: left;
+    }
+    #title4>span{
+      line-height: 30px;
+    }
+    #title4>img{
+      position: relative;
+      left: 0px;
+      top:10px;
+    }
+    #title5>img{
+      float: left;
+    }
+    #title5>span{
+      height: 30px;
+      width: 200px;
+      line-height: 60px;
+    }
+    #title6{
+      width: 200px;
+      height: 30px;
+    }
+    #btn1{
+      width: 90px;
+      float: left;
+    }
+    #btn2{
+      width: 90px;
+      float: left;
+      margin-left: 10px;
+    }
+    #downs{
+      width: 10px;
+      height: 10px;
+      margin-left: 67px;
+    }
+    #downs>img{
+      width: 10px;
+      height: 10px;
+    }
+    #dess{
+  display: none;
+  position: absolute;
+  width: 180px;
+  height: 80px;
+  z-index: 999;
+  border: 1px solid rgb(230, 230, 230);
+  }
+
 	</style>
 </head>
 <body>
+    <div id="top-wrap">
+    <div id="top">
+      <a href="" id="destination">送至：北京<img id="desimg" src="images/down.png" alt=""></a>
+      <div id="des">
+        <a href="">北京</a><a href="">天津</a><a href="">河北</a><a href="">山西</a><a href="">内蒙古</a>
+        <a href="">辽宁</a><a href="">吉林</a><a href="">沈阳</a><a href="">上海</a><a href="">江苏</a>
+        <a href="">浙江</a><a href="">安徽</a><a href="">福建</a><a href="">江西</a><a href="">山东</a>
+        <a href="">河南</a><a href="">湖北</a><a href="">湖南</a><a href="">广东</a><a href="">广西</a>
+        <a href="">海南</a><a href="">重庆</a><a href="">四川</a><a href="">贵州</a><a href="">云南</a>
+        <a href="">西藏</a><a href="">陕西</a><a href="">甘肃</a><a href="">青海</a><a href="">宁夏</a>
+        <a href="">新疆</a><a href="">台湾</a><a href="">香港</a><a href="">澳门</a><a href="">钓鱼岛</a>
+      </div>
+      <div id="top-right">
+        <div id="welcome">欢迎光临当当，请<a href="#"><span id="login">登陆</span></a> <a href="#" id="vip">成为会员</a></div>
+        <a id="top-market" href="#"><img src="images/smallmarket.png" id="smallmarket"> 购物车<span id="zero">0</span></a>
+        <a href="#" class="top-wright-text">&nbsp;我的订单</a>
+        <a href="#" class="top-wright-text">&nbsp;我的云书房</a>
+        <a href="#" class="top-wright-text" id="ll">&nbsp;我的当当<img id="llimg" src="images/down.png" alt=""></a>
+        <a href="#" class="top-wright-text" id="mm">&nbsp;0元领物<img id="mmimg" src="images/down.png" alt=""></a>
+        <a href="#" class="top-wright-text">&nbsp;小说投稿</a>
+        <a href="#" class="top-wright-text">&nbsp;我要出书</a>
+        <div class="wright-text" id="nn">&nbsp;企业采购<img id="nnimg" src="images/down.png" alt=""></div>
+        <div class="wright-text" id="oo">&nbsp;客户服务<img id="ooimg" src="images/down.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <div id="head-wrap">
+    <div id="head">
+      <img src="images/logo.gif" alt="">
+      <div id="mydd">
+        <a href="" class="mydd">银铃铛抵现</a>
+        <a href="" class="mydd">我的收藏</a>
+        <a href="" class="mydd">我的余额</a>
+        <a href="" class="mydd">我的评论</a>
+        <a href="" class="mydd">礼券/礼品卡</a>
+      </div>
+      <div id="zeroget">
+        <a href="" class="get">0元领物</a>
+        <a href="" class="get">当当拼团</a>
+        <a href="" class="get">1元砍价</a>
+        <a href="" class="get">1分抽奖</a>
+      </div>
+      <div id="buy">
+        <a href="" class="buyy">大宗采购</a>
+        <a href="" class="buyy">礼品卡采购</a>
+        <a href="" class="buyy">礼品卡激活</a>
+        <a href="" class="buyy">礼品卡使用</a>
+        <a href="" class="buyy">分销/荐购</a>
+        <a href="" class="buyy">礼品卡专区</a>
+      </div>
+      <div id="serve">
+        <a href="" class="servelist">帮助中心</a>
+        <a href="" class="servelist">自助退换货</a>
+        <a href="" class="servelist">自助发票</a>
+        <a href="" class="servelist">联系客服</a>
+        <a href="" class="servelist">我要投诉</a>
+      </div>
+      <input type="text" id="inputtext" value="  3-6岁经典绘本">
+      <a href="" id="search">
+        <img id="mirror" src="images/bigmirror.png" alt="">
+      </a>
+      <a href="#" id="market"><img id="marketimg" src="images/whitemarket.png" alt="">&nbsp;<span id="markettxt">购物车 0</span></a>
+      <a href="#" id="ding">我的订单</a>
+      <div id="hot">热搜： 
+        <a href="#" class="hot">当当优品</a>
+        <a href="#" class="hot">顾客心理战</a>
+        <a href="#" class="hot">星期六女靴</a>
+        <a href="#" class="hot">人性的弱点</a>
+        <a href="#" class="hot">四大名著</a>
+        <a href="#" class="hot">秒杀1元抢</a>
+        <a href="#" id="ad" class="hot">高级搜索</a>
+      </div>
+      <div class="all">
+        <span>全部商品分类</span>
+        <img src="images/whitedown.png" alt="">
+      </div>
+      <div class="cl">
+        <a href="#">图书</a>
+        <a href="#">电子书</a>
+        <a href="#">网络文学</a>
+        <a href="#">服装</a>
+        <a href="#">运动户外</a>
+        <a href="#">孕婴童</a>
+        <a href="#">家居</a>
+        <a href="#">拍卖</a>
+        <a href="#">食品</a>
+        <a href="#">Apple</a>
+        <a href="#">电器城</a>
+      </div>
+    </div>
+  </div>
+  </div>
 <div class="main">
 	<div >
-		<img  class="img" src="img/img1.PNG">
+		<a href="#"><img  class="img" src="images/img1.PNG"></a>
 	</div>
 	<div id="title">
 		<span class="title">
@@ -98,18 +516,18 @@
 	<div id="image">
 	<div id="bigger">
 	  <div id="img1">
-    <img src="img/img4.PNG" width="400" height="400" id="Simg"/>
+    <img src="images/img4.PNG" width="400" height="400" id="Simg"/>
     <div id="slider"></div>
     </div>
     <div id="img2">
-    <img src="img/img4.PNG"  id="Bimg"/>
+    <img src="images/img4.PNG"  id="Bimg"/>
     </div>
     <div id="imgs">
-      <div><img src="img/img4.PNG"></div>
-      <div><img src="img/img4.PNG"></div>
-      <div><img src="img/img4.PNG"></div>
-      <div><img src="img/img4.PNG"></div>
-      <div><img src="img/img4.PNG"></div>
+      <div><img src="images/img4.PNG"></div>
+      <div><img src="images/img4.PNG"></div>
+      <div><img src="images/img4.PNG"></div>
+      <div><img src="images/img4.PNG"></div>
+      <div><img src="images/img4.PNG"></div>
     </div>
     </div>
 	</div>
@@ -117,13 +535,30 @@
       <div id="price">
       <div id="word"><p>爱果乐儿童学习桌小学生书桌 实木 写字桌椅套装可升降 课桌椅家用</p></div>
       <div id="comment">
-        <img src="img/skr.PNG">
+        <img src="images/skr.PNG">
         <a href="#">390</a>条评论
       </div>
       </div>
-      <div id="right">
-      
+      <div id="right-tops">
+      <div id="title1">
+    <img src="images/shop.JPG">
+    <span>爱果乐旗舰店</span>
+  </div>
+  <div id="title2">店铺总分 <span>4.74</span> 分<a href="" id="downs"><img src="images/down.png" id="dimg"></div>
+   <div id="dess">
+        <img src="images/img9.png">
       </div>
+  <div id="timitle3">
+    <img src="images/b6.JPG">
+  </div>
+  <div id="title4"><img src="images/b1.JPG"><span>正品保障</span></div>
+  <div id="title4"><img src="images/b2.JPG"><span>支持七天无理由退货</span></div>
+  <div id="title4"><img src="images/b3.JPG"><span>推荐商家</span></div>
+  <div id="title4"><img src="images/b4.JPG"><span>支持礼品卡</span></div>
+  <div id="title4"><img src="images/b5.JPG"></div>
+  <div id="title5"><span>联系电话 18015581591</span></div>
+  <div id="title6"><button id="btn1">进入店铺<tton><button id="btn2">收藏店铺<tton></div>
+</div>
   </div>
 </div>
 </body>
@@ -134,6 +569,199 @@
   var slider = document.getElementById('slider');
   var img2 = document.getElementById('img2');
   var Bimg = document.getElementById('Bimg');
+  var destination = document.getElementById("destination");
+var desimg = document.getElementById("desimg");
+var des = document.getElementById("des");
+var downs = document.getElementById("downs");
+var dess = document.getElementById("dess");
+var dimg = document.getElementById("dimg");
+var vip = document.getElementsByClassName("top-wright-text");
+downs.onmouseover = function(){
+  dimg.src = "images/up.png";
+  dess.style.display = "block";
+}
+downs.onmouseout = function(){
+   dimg.src = "images/down.png";
+  dess.style.display = "none";
+}
+
+destination.onmouseover = function(){
+  desimg.src = "images/up.png";
+  des.style.display = "block";
+}
+destination.onmouseout = function(){
+  desimg.src = "images/down.png";
+  des.style.display = "none";
+}
+des.onmouseover = function(){
+  des.style.display = "block";
+}
+des.onmouseout = function(){
+  des.style.display = "none";
+}
+var desList = des.children;
+for(var i=0; i<desList.length; i++){
+  desList[i].onmouseover = function(){
+    this.style.color = "red";
+  }
+  desList[i].onmouseout = function(){
+    this.style.color = "";
+  }
+}
+for(var i=0; i<vip.length; i++){
+  vip[i].onmouseover = function(){
+    this.style.color = "red";
+  }
+  vip[i].onmouseout = function(){
+    this.style.color = "";
+  }
+}
+var mydd = document.getElementById("ll");
+var myddList = document.getElementsByClassName("mydd");
+var my = document.getElementById("mydd");
+var llimg = document.getElementById("llimg");
+mydd.onmouseover = function(){
+  mydd.style.color = "red";
+  my.style.display = "block";
+  llimg.src = "images/up.png";
+}
+mydd.onmouseout = function(){
+  mydd.style.color = "";
+  my.style.display = "none";
+  llimg.src = "images/down.png";
+}
+my.onmouseover = function(){
+  my.style.display = "block";
+}
+my.onmouseout = function(){
+  my.style.display = "none";
+}
+for(var i=0; i<myddList.length; i++){
+  myddList[i].onmouseover = function(){
+    this.style.backgroundColor = "white";
+    this.style.color = "red";
+  }
+  myddList[i].onmouseout = function(){
+    this.style.backgroundColor = "";
+    this.style.color = "";
+  }
+}
+var zeroget = document.getElementById("zeroget");
+var mm = document.getElementById("mm");
+var getList = document.getElementsByClassName("get");
+var mmimg = document.getElementById("mmimg");
+mm.onmouseover = function(){
+  mm.style.color = "red";
+  zeroget.style.display = "block";
+  mmimg.src = "images/up.png";
+}
+mm.onmouseout = function(){
+  mm.style.color = "";
+  zeroget.style.display = "none";
+  mmimg.src = "images/down.png";
+}
+zeroget.onmouseover = function(){
+  zeroget.style.display = "block";
+}
+zeroget.onmouseout = function(){
+  zeroget.style.display = "none";
+}
+for(var i=0; i<getList.length; i++){
+  getList[i].onmouseover = function(){
+    this.style.backgroundColor = "white";
+    this.style.color = "red";
+  }
+  getList[i].onmouseout = function(){
+    this.style.backgroundColor = "";
+    this.style.color = "";
+  }
+}
+var buy = document.getElementById("buy");
+var nn = document.getElementById("nn");
+var buyyList = document.getElementsByClassName("buyy");
+var nnimg = document.getElementById("nnimg");
+nn.onmouseover = function(){
+  nn.style.color = "red";
+  buy.style.display = "block";
+  nnimg.src = "images/up.png";
+}
+nn.onmouseout = function(){
+  nn.style.color = "";
+  buy.style.display = "none";
+  nnimg.src = "images/down.png";
+}
+buy.onmouseover = function(){
+  buy.style.display = "block";
+}
+buy.onmouseout = function(){
+  buy.style.display = "none";
+}
+for(var i=0; i<buyyList.length; i++){
+  buyyList[i].onmouseover = function(){
+    this.style.backgroundColor = "white";
+    this.style.color = "red";
+  }
+  buyyList[i].onmouseout = function(){
+    this.style.backgroundColor = "";
+    this.style.color = "";
+  }
+}
+var serve = document.getElementById("serve");
+var serveList = document.getElementsByClassName("servelist");
+var oo = document.getElementById("oo");
+var ooimg = document.getElementById("ooimg");
+oo.onmouseover = function(){
+  oo.style.color = "red";
+  serve.style.display = "block";
+  ooimg.src = "images/up.png";
+}
+oo.onmouseout = function(){
+  oo.style.color = "";
+  serve.style.display = "none";
+  ooimg.src = "images/down.png";
+}
+serve.onmouseover = function(){
+  serve.style.display = "block";
+}
+serve.onmouseout = function(){
+  serve.style.display = "none";
+}
+for(var i=0; i<serveList.length; i++){
+  serveList[i].onmouseover = function(){
+    this.style.backgroundColor = "white";
+    this.style.color = "red";
+  }
+  serveList[i].onmouseout = function(){
+    this.style.backgroundColor = "";
+    this.style.color = "";
+  }
+}
+var hotList = document.getElementsByClassName("hot");
+for(var i=0; i<hotList.length; i++){
+  hotList[i].onmouseover = function(){
+    this.style.color = "red";
+  }
+  hotList[i].onmouseout = function(){
+    this.style.color = "";
+  }
+}
+var inputtext = document.getElementById("inputtext");
+inputtext.onclick = function(){
+  inputtext.value = "";
+}
+var market = document.getElementById("market");
+var marketimg = document.getElementById("marketimg");
+var markettxt = document.getElementById("markettxt");
+market.onmouseover=function(){
+  marketimg.src = "images/redmarket.png";
+  market.style.backgroundColor = "rgb(246,246,246)";
+  markettxt.style.color = "rgb(255,40,50)";
+}
+market.onmouseout=function(){
+  marketimg.src = "images/whitemarket.png";
+  market.style.backgroundColor = "rgb(255,40,50)";
+  markettxt.style.color = "rgb(246,246,246)";
+}
   img1.onmouseover = function(){
     img2.style.float="left";
     slider.style.display = "block";
@@ -151,20 +779,21 @@
     var biggerTop = bigger.offsetTop;
     var sliderWidth = slider.offsetWidth;
     var sliderHeight = slider.offsetHeight;
-    if(mouseX<217){
-      mouseX=217;
+    console.log(mouseX,mouseY);
+    if(mouseX<130){
+      mouseX=130;
     }
-     if(mouseX>413){
-      mouseX=413;
+     if(mouseX>330){
+      mouseX=330;
     }
-     if(mouseY<220){
-      mouseY=220;
+     if(mouseY<293){
+      mouseY=293;
     }
-     if(mouseY>406){
-      mouseY=406;
+     if(mouseY>490){
+      mouseY=490;
     }
     var sliderLeft = mouseX - biggerLeft -sliderWidth/2;
-    var sliderTop = mouseY - biggerTop -sliderHeight/2;
+    var sliderTop = mouseY+100 - biggerTop -sliderHeight/2;
     slider.style.left = sliderLeft +"px";
     slider.style.top = sliderTop +"px";
     if(sliderLeft<=0){
