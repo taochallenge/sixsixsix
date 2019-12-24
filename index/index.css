@@ -2,7 +2,7 @@
 * @Author: taochallenge
 * @Date:   2019-12-17 17:58:12
 * @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-21 21:59:17
+* @Last Modified time: 2019-12-24 20:45:04
 */
 /* 头部部分 */
 *{
@@ -256,6 +256,7 @@ input:focus{
 	top:135px;
 	left: 875px;
 }
+
 /* 中间部分 */
 .fix{
 	position: fixed;
@@ -313,6 +314,7 @@ input:focus{
 	position: relative;
 	margin: 0 auto;
 	width: 1200px;
+	overflow: hidden;
 }
 #list{
 	width: 200px;
@@ -475,41 +477,50 @@ input:focus{
 	margin-right: 5px;
 }
 .footer{
-	background-color: pink;
-	height: 150px;
 	position: absolute;
 	top: 1200px;
-	width: 1200px;
-	left: 156px;
-	height: 280px;
+	height: 150px;
+	border-bottom:1px solid #454545;
 }
 .footer div{
 	width: 90px;
 	display: inline-block;
 	margin-top: 15px;
-	margin-left:180px;		
+	margin-left: 180px;		
 }
 .footer a{
 	color: rgb(30,41,61);
+}
+.footer a:hover{
+	color: red;
 }
 .size{
 	font-size: 14px;
 }
 .copyright{
+	text-align: center;
 	position: absolute;
 	top: 1400px;
 	left: 400px;
-	border-top:1px solid #454545;
-	height: 97px;
-	text-align: center;
 	color:rgb(30,41,61);
 	font-size: 14px;
+	height: 97px;
 }
 .copyright a{
 	color: rgb(30,41,61);
 }
+.copyright a:hover{
+	color: red;
+}
 .true{
-	position: absolute;
-	top: 1090px;
-	left: 156px;
+	position: relative;
+	top: 300px;
+	z-index: -1;
+	height: 76px;
+	border-top: 4px solid red;
+	background-color: rgb(250, 250, 250);
+}
+.true img{
+	display: block;
+	margin-left: 150px;
 }
