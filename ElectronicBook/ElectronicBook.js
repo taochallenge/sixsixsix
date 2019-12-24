@@ -75,11 +75,39 @@ for(var i = 0;i < oNavlist.length;i++){
 /********************************************************************/
 var btn3=document.getElementById("btn3");
 var btn2=document.getElementById("btn1");
+btn2.onmouseover=function(){
+	this.style.backgroundColor="#ccffff";
+}
+btn2.onmouseout=function(){
+	this.style.backgroundColor="#fff";
+}
 btn2.onclick=function(){
+	this.style.backgroundColor="#bbb";
 	alert("请登录微信公众号参与活动");
 }
 btn3.onclick=function(){
 	prompt("请输入要反馈的内容：");
 	alert("反馈成功");
 }
-/************************************************************************/
+btn3.onmouseover=function(){
+	this.style.backgroundColor="#ccffff";
+}
+btn3.onmouseout=function(){
+	this.style.backgroundColor="#fff";
+}
+var a=document.getElementsByTagName("a");
+for(var i=0;i<a.length-1;i++){
+	a[i].onclick=function(){
+		this.style.color="#ccffff";
+	}
+}
+
+/**************************************************************************************/
+var weixins=document.getElementById("weixins");
+var weixin=document.getElementById("weixin");
+weixins.onmouseover=function(){
+	this.src="images/weixin.png";
+}
+weixins.onmouseout=function(){
+	this.src="images/weixin.JPG";
+}
