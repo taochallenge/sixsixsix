@@ -4,6 +4,10 @@
 * @Last Modified by:   taochallenge
 * @Last Modified time: 2019-12-17 18:17:42
 */
+a{
+	text-decoration: none;
+	color: #000;
+}
 #big-box{
 	width: 1200px;
 	margin: 0 auto;
@@ -81,11 +85,11 @@ select{
 	float: left;
 	border: 1px solid #ccc;	
 }
-#car>img{
+#car>a>img{
 	margin-top: 10px;
 	float: left;
 }
-#car>p{
+#car>a>p{
 	width: 60px;
 	line-height: 20px;
 	float: left;
@@ -129,8 +133,8 @@ select{
 	font-weight: bold;
 }
 #right_1>ul>li:hover{
-	border-bottom: 2px solid red;
 	color: red;
+	text-decoration: underline;
 }
 #right_2{
 	float: right;
@@ -175,8 +179,9 @@ select{
 	font-weight: bold;
 	width:250px;
 }
-#box_left>div>ul>li:hover{
-	color: blue;
+#box_left>div>ul>li>a:hover{
+	text-decoration: underline;
+	color: red;
 }
 #more{
 	line-height: 30px;
@@ -318,17 +323,17 @@ select{
 	float: left;
 	border:1px solid #ccc;
 }
-#boxs>ul>li>img{
+#boxs>ul>li>a>img{
 	width: 160px;
 	height: 190px;
 }
-#boxs>ul>li>img:hover{
+#boxs>ul>li>a>img:hover{
 	width: 156px;
 	height: 186px;
 	boder:2px solid #CCCC00;
 }
 
-#boxs>ul>li>div>span{
+#boxs>ul>li>a>div>span{
 	width: 80px;
 	height: 30px;
 	margin-left: 1px;
@@ -336,7 +341,7 @@ select{
 	font-weight: bold;
 	color: red;
 }
-#boxs>ul>li>div>p{
+#boxs>ul>li>a>div>p{
 	width: 70px;
 	height: 30px;
 	margin-right: 1px;
@@ -381,12 +386,13 @@ select{
 	font-weight: bold;
 	color: red;
 }
-#box_right>ul>li>div{
+#box_right>ul>li>a>div{
 	float: left;
 	text-align: 50px;
 	margin-left: 15px;
 }
-#box_right>ul>li>div:hover{
+#box_right>ul>li>a>div:hover{
+	color: red;
 	text-decoration: underline;
 }
 /**********************************************************************/
@@ -450,6 +456,9 @@ select{
 }
 #weixin{
 	margin-top: 30px;
+}
+#weixin>a>img{
+	margin-top: 20px;
 }
 #bottom_title{
 	width: 1200px;
