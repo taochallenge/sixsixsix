@@ -2,7 +2,7 @@
 * @Author: taochallenge
 * @Date:   2019-12-17 18:10:01
 * @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-17 18:10:01
+* @Last Modified time: 2019-12-24 17:06:47
 */
 *{
 	margin: 0;
@@ -30,8 +30,7 @@ a:hover{
 }
 #top-right{
 	position: absolute;
-	top: 0;
-	left: 400px;
+	right: 0;
 	float: right;
 }
 #top-right a{
@@ -59,9 +58,8 @@ a:hover{
 	border-bottom:4px solid rgb(255,40,50);
 }
 #hi{
-	position: relative;
-	width: 1000px;
-	left: 100px;
+	position: absolute;
+	left: 0;
 }
 #hi0{
 	color: #f00;
