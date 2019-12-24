@@ -1,416 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<style type="text/css">
-	  *{margin:0; padding:0;}
-		a{text-decoration: none;}
-    ul li{list-style: none;}
-#top-wrap{
-  height: 35px;
-  background-color: rgb(249,249, 249);
-}
-#top{
-  position: relative;
-  margin: 0 auto;
-  width: 1200px;
-  height: 35px;
-  line-height: 35px;
-  font-size: 13px;
-}
-#destination{
-  display: block;
-  color: rgb(100, 100, 100);
-  width: 80px;
-  height: 33px;
-  margin-bottom: -1px;
-  border-bottom: white;
-}
-#des{
-  display: none;
-  position: absolute;
-  width: 300px;
-  height: 240px;
-  border: 1px solid red;
-  background-color: white;
-  z-index: 999;
-  border: 1px solid rgb(230, 230, 230);
-}
-#des a{
-  font-size: 12px;
-  color: rgb(100, 100, 100);
-  display: inline-block;
-  margin-right: 20px;
-  margin-left: 10px;
-  margin-bottom: -10px;
-}
-#top-right{
-  position: absolute;
-  top: 0;
-  left: 390px;
-  float: right;
-}
-#top-right a{
-  height: 20px;
-  display: inline-block;
-  color: rgb(100, 100, 100);
-}
-#login{
-  color: red;
-}
-#vip:hover{
-  color: red;
-}
-#welcome{
-  float: left;
-}
-#zero{
-  color: red;
-}
-#smallmarket{
-  position: relative;
-  top: 5px;
-}
-#top-market:hover{
-  color: red;
-}
-.top-wright-text{
-  height: 15px;
-  line-height: 10px;
-  display: inline-block;
-}
-.wright-text{
-  height: 20px;
-  line-height: 10px;
-  display: inline-block;
-}
-#head-wrap{
-  height: 142px;
-  border-bottom:2px solid rgb(255,40,50);
-}
-#mydd{
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 794px;
-  width: 70px;
-  height: 120px;
-  z-index: 999;
-  background-color: rgb(249,249, 249);
-}
-.mydd,.get,.buyy,.servelist{
-  color: rgb(100, 100, 100);
-  font-size: 12px;
-  text-indent: 4px;
-  display: inline-block;
-  width: 70px;
-  height: 20px;
-}
-#zeroget{
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 864px;
-  width: 70px;
-  height: 100px;
-  z-index: 999;
-  background-color: rgb(249,249, 249);
-}
-#buy{
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 1050px;
-  width: 70px;
-  z-index: 999;
-  height: 150px;
-  background-color: rgb(249,249, 249);
-}
-#serve{
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 1125px;
-  width: 70px;
-  z-index: 999;
-  height: 120px;
-  background-color: rgb(249,249, 249);
-}
-#head{
-  position: relative;
-  width: 1200px;
-  margin: 0 auto;
-}
-input{
-  color: rgb(102, 102, 102);
-  font-size: 12px;
-  position: absolute;
-  left: 400px;
-  top: 25px;
-  width: 500px;
-  height: 35px;
-  border: 2px solid rgb(255,40,50);
-}
-input:focus{
-  outline: none;
-}
-#search{
-  display: block;
-  height: 39px;
-  width: 42px;
-  background-color: rgb(255,40,50);
-  position: absolute;
-  top: 25px;
-  left: 900px;
-  text-align: center;
-}
-#mirror{
-  margin-top: 2px;
-}
-#market{
-  color: white;
-  width: 100px;
-  height: 39px;
-  background-color: rgb(255,40,50);
-  position: absolute;
-  top: 25px;
-  left: 1000px;
-}
-#marketimg{
-  margin-top: 2px;
-}
-#markettxt{
-  position: absolute;
-  top: 9px;
-  font-size: 15px;
-}
-#ding{
-  width: 100px;
-  height: 39px;
-  position: absolute;
-  top: 25px;
-  left: 1100px;
-  background-color: rgb(246,246, 246);
-  text-align: center;
-  line-height: 39px;
-  color: rgb(100,100,100);
-}
-#ding:hover{
-  color: red;
-}
-#hot{
-  font-size: 12px;
-  color: rgb(150, 150, 150);
-  position: absolute;
-  left: 400px;
-  top: 70px;
-}
-#hot a{
-  color: rgb(150, 150, 150);
-  display: inline-block;
-  margin-right: 10px;
-}
-#ad{
-  margin-left: 42px;
-}
-.all{
-  position: absolute;
-  top: 102px;
-  color: white;
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
-  background-color: rgb(250, 40, 50);
-}
-.all span{
-  margin-left: 20px;
-}
-.all img{
-  margin-left: 40px;
-}
-.cl{
-  position: absolute;
-  top: 110px;
-  left: 230px;
-}
-.cl a{
-  margin-right: 25px;
-  color: #000;
-  font-weight: bold;
-  font-size: 15px;
-}
-.cl a:hover{
-  color: red;
-}
-.hot1{
-  position: absolute;
-  top:135px;
-  left: 875px;
-}
-		.main{
-			width: 1200px;
-			margin: 0 auto;
-		}
-		.img{
-			width: 1200px;
-			height: 80px;
-		}
-		#title{
-			text-align:left;
-			font-size: 80%;
-      margin-bottom: 10px;
-		}
-		.title>a{
-			color: #000000;
-      font-size: 120%;
-		}
-		.first{
-			font-weight:bold;	
-		}
-		.image{
-			width:400px;
-			height: 1000px;
+  <meta charset="UTF-8">
+	<title>shopping</title>
+  <link rel="stylesheet" href="shopping.css">
+  <style type="text/css">
+    #price1{
+      width: 580px;
+      height: 180px;
+      background:#FFFFF7;
+    }
+    #pricenow{
+      width: 200px;
+      height: 200px;
       float: left;
-      }
-	 #bigger{width:800px;height:800px;position:absolute; }
-   #img1{width:400px;height:400px;position:absolute;left:0;top:0;float:left;}
-   #slider{width:200px;height:200px;position:absolute;left:0;top:0;background:#CCC;opacity:0.4;cursor: move;display:none; filter:alpha(opacity=60);}
-   #img2{position:absolute;right:0;top:0;width:400px;height:400px;overflow:hidden;display: none; z-index:9;}
-   #Bimg{position:absolute;left:0;top:0px;width:800px;height:800px;}
-   #imgs{
-    height: 50px;
-    width: 400px;
-    margin-top:10px;
-    margin-bottom: 10px ;
-    position:relative;
-    left:0;
-    top:400px; 
-   }
-   #imgs>div{
-    margin-left: 25px;
-    height: 50px;
-    width: 50px;
-    display: inline-block;
-   }
-   #imgs>div>img{
-    height: 50px;
-    width: 50px;
-   }
-   #price{
-    margin-left: 20px;
-   	width: 590px;
-   	height: 1000px;
-   	float:left;
-   }
-   #word{
-    margin-top:10px; 
-    height:40px;
-    font-weight: bold;
-    font-size: 110%;
-   }
-   #comment{
-    display:block;
-    font-size: 80%;
-   }
-   #shop{
-    width: 800px;
-    height: 1000px;
-    float: right;
-   }
-      #right-tops{
-      width: 180px;
-      height: 400px;
+    }
+    #priceimg{
+      width: 320px;
+      height: 200px;
       float: right;
     }
-    #title1{
-      width: 180px;
-      height: 30px;
-      float: left;
-    }
-    #title1>img{
-      float: left;
-    }
-    #title1>span{
-      width: 130px;
-      height: 30px;
-      line-height: 30px;
-      float: left;
-    }
-    #title2{
-      height: 25px;
-      width: 180px;
-      float: left;
-      font-size: 80%;
-    }
-    #title2>span{
-      width: 180px;
-      height: 25px;
-      font-size: 120%;
-      color: red;
-    }
-    #title3{
-      width: 180px;
-      height: 40px;
-      float: left;
-    }
-    #title3>img{
-      width: 180px;
-      height: 40px;
-    }
-    #title4{
-      height: 30px;
-      width: 180px;
+    #pricenow>div{
       margin-top: 10px;
-      float: left;
+      margin-bottom: 10px;
+      height: 20px;
+       width:200px
     }
-    #title4>span{
-      line-height: 30px;
-    }
-    #title4>img{
-      position: relative;
-      left: 0px;
-      top:10px;
-    }
-    #title5>img{
-      float: left;
-    }
-    #title5>span{
-      height: 30px;
-      width: 200px;
-      line-height: 60px;
-    }
-    #title6{
-      width: 200px;
-      height: 30px;
-    }
-    #btn1{
-      width: 90px;
-      float: left;
-    }
-    #btn2{
-      width: 90px;
-      float: left;
-      margin-left: 10px;
-    }
-    #downs{
-      width: 10px;
-      height: 10px;
-      margin-left: 67px;
-    }
-    #downs>img{
-      width: 10px;
-      height: 10px;
-    }
-    #dess{
-  display: none;
-  position: absolute;
-  width: 180px;
-  height: 80px;
-  z-index: 999;
-  border: 1px solid rgb(230, 230, 230);
-  }
+#pricenow>div>p{
+  float: left;
+}
+#pricechange{
+  font-weight: bold;
+  font-size: 200%; 
+  margin-right: 30px;
+}
+#change{
+  padding-top: 10px;
+}
+#price2{
+  height: 30px;
+  width: 580px;
+}
+#price2>p{
+  color: #aaa;
+  margin-left:15px;
+  margin-right: 15px;
+  float: left; 
+}
+#price3{
+  margin-top: 20px;
+  height: 60px;
+  width: 580px;
+  color: #888;
+}
+#price3>p{
+  margin-left:15px;
+  margin-right: 15px;
+  float: left; 
+}
+#price3>div{
+  height: 30px;
+  width: 580px;
+}
+#price3cut>p{
+  width: 50px;
+  margin-left: 15px;
+  float: left;
+}
+#price4{
+    height: 30px;
+  width: 580px;
+  color: #888;
+}
+#price4>div>p{
+  margin-left: 15px;
+  float: left;
+}
+#i{
+width: 50px;
+height: 18px;
+border: 1px solid #000;
+position: relative;
+left: -150px;
+top: 0;
+}
+#price4{
+    height: 30px;
+  width: 580px;
+  color:  #888;
+}
+#price4>div>p{
+  margin-left: 15px;
+  float: left;
+}
+#price5{
+    height: 100px;
+  width: 580px;
+  color:  #888;
+}
+#price5>div>p{
+  margin-left: 15px;
+  float: left;
+}
+#color{
+  width: 500px;
+  height: 150px;
+  float: right;
+}
+#color>img{
+  width: 50px;
+  height: 50px;
+  border:  1px solid #ccc;
+  float: left;
+  margin: 5px;
+}
+#price6{
+width: 500px;
+height: 40px;
+margin-top: 50px;
 
-	</style>
+}
+        #num{
+            box-sizing:border-box;
+            height:40px;
+            width:40px;
+            font-size:10px;
+            text-align:center;
+            vertical-align:bottom;
+            position: relative;
+           left: -80px;
+           border:1px solid #ccc;
+             top: -14px;
+        }
+        #btu3{
+          width: 120px;
+          height: 40px;
+         margin-right: 25px;
+        }
+        #btu4{
+           width: 100px;
+           height: 40px;
+           position: relative;
+            top: -14px;
+        }
+ </style>
 </head>
 <body>
     <div id="top-wrap">
@@ -523,11 +256,11 @@ input:focus{
     <img src="images/img4.PNG"  id="Bimg"/>
     </div>
     <div id="imgs">
-      <div><img src="images/img4.PNG"></div>
-      <div><img src="images/img4.PNG"></div>
-      <div><img src="images/img4.PNG"></div>
-      <div><img src="images/img4.PNG"></div>
-      <div><img src="images/img4.PNG"></div>
+      <img src="images/img4.PNG">
+      <img src="images/img5.PNG">
+      <img src="images/img6.PNG">
+      <img src="images/img7.PNG">
+      <img src="images/img8.PNG">
     </div>
     </div>
 	</div>
@@ -538,6 +271,54 @@ input:focus{
         <img src="images/skr.PNG">
         <a href="#">390</a>条评论
       </div>
+      <div id="price1">
+        <div id="pricenow">
+          <div><p style="color: #aaa">当当网 </p><a  style="margin-left: 20px"href="#">降价通知</a><br></div>
+          <div style="height: 40px;color: red;"><p style="padding-top: 15px;">¥</p><p id="pricechange">6030</p>
+            <p id="change">(5.49折)</p></div>
+        </div>
+        <div id="priceimg"><img src="images/img2.PNG"></div>
+      </div>
+      <div id="price2"><p style="margin-right: 30px">领     劵</p>
+           <a href="#"><img src="images/img10.PNG"></a>
+      </div>
+      <div id="price3">
+        <div id="price3cut"><p style="color: #aaa">促   销</p><p style="background: red;color: #fff;width: 70px">满N件折</p><p style="width:90px">满1件打3折</p><a href="#" style="color:  #aaa">详情>></a></div>
+        <div><p style="margin-left: 80px">☹促销不可多选，请在购物车选择该单品能享受的促销</p></div>
+      </div>
+      <div id="price4">
+        <div><p style="color: #aaa">配送至</p><p>江苏苏州市 至</p><input id="i" type="text" name="place"><p style="margin-left:60px ">有货 运费0元</p></div>
+      </div>
+      <div id="price4"> 
+        <div><p>服   务</p><p style="padding-left:10px;">由“爱果乐旗舰店”发货，并提供售后服务。</p></div>
+      </div>
+      <div id="price5">
+        <div><p>颜   色</p>
+          <div id="color"> 
+            <img src="images/shop1.PNG">
+            <img src="images/shop2.PNG">
+            <img src="images/shop3.PNG">
+            <img src="images/shop4.PNG">
+            <img src="images/shop5.PNG">
+            <img src="images/shop6.PNG">
+            <img src="images/shop7.PNG">
+            <img src="images/shop8.PNG">
+            <img src="images/shop9.PNG">
+            <img src="images/shop10.PNG">
+            <img src="images/shop11.PNG">
+            <img src="images/shop12.PNG">
+          </div>
+          </div>
+          </div>
+      <div id="price6">
+          <button style=" margin-right: 32px;width: 40px;height:40px " id="btn1">-</button>
+        <input id="num" value="0">
+        <button style="width: 40px ;height: 40px" id="btn2">+</button>
+        <button id="btu3"><img style="width: 120px;height: 40px" src="images/btu1.png"></button>
+        <button id="btu4">立即购买</button>
+      </div>
+        
+      
       </div>
       <div id="right-tops">
       <div id="title1">
@@ -558,266 +339,66 @@ input:focus{
   <div id="title4"><img src="images/b5.JPG"></div>
   <div id="title5"><span>联系电话 18015581591</span></div>
   <div id="title6"><button id="btn1">进入店铺<tton><button id="btn2">收藏店铺<tton></div>
-</div>
   </div>
-</div>
+  </div>
+  </div>
+  <script type="text/javascript" src="shopping.js"></script>
 </body>
 <script type="text/javascript">
-  var bigger = document.getElementById('bigger');
-  var img1 = document.getElementById('img1');
-  var Smig = document.getElementById('Simg');
-  var slider = document.getElementById('slider');
-  var img2 = document.getElementById('img2');
-  var Bimg = document.getElementById('Bimg');
-  var destination = document.getElementById("destination");
-var desimg = document.getElementById("desimg");
-var des = document.getElementById("des");
-var downs = document.getElementById("downs");
-var dess = document.getElementById("dess");
-var dimg = document.getElementById("dimg");
-var vip = document.getElementsByClassName("top-wright-text");
-downs.onmouseover = function(){
-  dimg.src = "images/up.png";
-  dess.style.display = "block";
-}
-downs.onmouseout = function(){
-   dimg.src = "images/down.png";
-  dess.style.display = "none";
-}
+   var Bimg = document.getElementById('Bimg');
+    var Simg = document.getElementById('Simg');
 
-destination.onmouseover = function(){
-  desimg.src = "images/up.png";
-  des.style.display = "block";
-}
-destination.onmouseout = function(){
-  desimg.src = "images/down.png";
-  des.style.display = "none";
-}
-des.onmouseover = function(){
-  des.style.display = "block";
-}
-des.onmouseout = function(){
-  des.style.display = "none";
-}
-var desList = des.children;
-for(var i=0; i<desList.length; i++){
-  desList[i].onmouseover = function(){
-    this.style.color = "red";
-  }
-  desList[i].onmouseout = function(){
-    this.style.color = "";
-  }
-}
-for(var i=0; i<vip.length; i++){
-  vip[i].onmouseover = function(){
-    this.style.color = "red";
-  }
-  vip[i].onmouseout = function(){
-    this.style.color = "";
-  }
-}
-var mydd = document.getElementById("ll");
-var myddList = document.getElementsByClassName("mydd");
-var my = document.getElementById("mydd");
-var llimg = document.getElementById("llimg");
-mydd.onmouseover = function(){
-  mydd.style.color = "red";
-  my.style.display = "block";
-  llimg.src = "images/up.png";
-}
-mydd.onmouseout = function(){
-  mydd.style.color = "";
-  my.style.display = "none";
-  llimg.src = "images/down.png";
-}
-my.onmouseover = function(){
-  my.style.display = "block";
-}
-my.onmouseout = function(){
-  my.style.display = "none";
-}
-for(var i=0; i<myddList.length; i++){
-  myddList[i].onmouseover = function(){
-    this.style.backgroundColor = "white";
-    this.style.color = "red";
-  }
-  myddList[i].onmouseout = function(){
-    this.style.backgroundColor = "";
-    this.style.color = "";
-  }
-}
-var zeroget = document.getElementById("zeroget");
-var mm = document.getElementById("mm");
-var getList = document.getElementsByClassName("get");
-var mmimg = document.getElementById("mmimg");
-mm.onmouseover = function(){
-  mm.style.color = "red";
-  zeroget.style.display = "block";
-  mmimg.src = "images/up.png";
-}
-mm.onmouseout = function(){
-  mm.style.color = "";
-  zeroget.style.display = "none";
-  mmimg.src = "images/down.png";
-}
-zeroget.onmouseover = function(){
-  zeroget.style.display = "block";
-}
-zeroget.onmouseout = function(){
-  zeroget.style.display = "none";
-}
-for(var i=0; i<getList.length; i++){
-  getList[i].onmouseover = function(){
-    this.style.backgroundColor = "white";
-    this.style.color = "red";
-  }
-  getList[i].onmouseout = function(){
-    this.style.backgroundColor = "";
-    this.style.color = "";
-  }
-}
-var buy = document.getElementById("buy");
-var nn = document.getElementById("nn");
-var buyyList = document.getElementsByClassName("buyy");
-var nnimg = document.getElementById("nnimg");
-nn.onmouseover = function(){
-  nn.style.color = "red";
-  buy.style.display = "block";
-  nnimg.src = "images/up.png";
-}
-nn.onmouseout = function(){
-  nn.style.color = "";
-  buy.style.display = "none";
-  nnimg.src = "images/down.png";
-}
-buy.onmouseover = function(){
-  buy.style.display = "block";
-}
-buy.onmouseout = function(){
-  buy.style.display = "none";
-}
-for(var i=0; i<buyyList.length; i++){
-  buyyList[i].onmouseover = function(){
-    this.style.backgroundColor = "white";
-    this.style.color = "red";
-  }
-  buyyList[i].onmouseout = function(){
-    this.style.backgroundColor = "";
-    this.style.color = "";
-  }
-}
-var serve = document.getElementById("serve");
-var serveList = document.getElementsByClassName("servelist");
-var oo = document.getElementById("oo");
-var ooimg = document.getElementById("ooimg");
-oo.onmouseover = function(){
-  oo.style.color = "red";
-  serve.style.display = "block";
-  ooimg.src = "images/up.png";
-}
-oo.onmouseout = function(){
-  oo.style.color = "";
-  serve.style.display = "none";
-  ooimg.src = "images/down.png";
-}
-serve.onmouseover = function(){
-  serve.style.display = "block";
-}
-serve.onmouseout = function(){
-  serve.style.display = "none";
-}
-for(var i=0; i<serveList.length; i++){
-  serveList[i].onmouseover = function(){
-    this.style.backgroundColor = "white";
-    this.style.color = "red";
-  }
-  serveList[i].onmouseout = function(){
-    this.style.backgroundColor = "";
-    this.style.color = "";
-  }
-}
-var hotList = document.getElementsByClassName("hot");
-for(var i=0; i<hotList.length; i++){
-  hotList[i].onmouseover = function(){
-    this.style.color = "red";
-  }
-  hotList[i].onmouseout = function(){
-    this.style.color = "";
-  }
-}
-var inputtext = document.getElementById("inputtext");
-inputtext.onclick = function(){
-  inputtext.value = "";
-}
-var market = document.getElementById("market");
-var marketimg = document.getElementById("marketimg");
-var markettxt = document.getElementById("markettxt");
-market.onmouseover=function(){
-  marketimg.src = "images/redmarket.png";
-  market.style.backgroundColor = "rgb(246,246,246)";
-  markettxt.style.color = "rgb(255,40,50)";
-}
-market.onmouseout=function(){
-  marketimg.src = "images/whitemarket.png";
-  market.style.backgroundColor = "rgb(255,40,50)";
-  markettxt.style.color = "rgb(246,246,246)";
-}
-  img1.onmouseover = function(){
-    img2.style.float="left";
-    slider.style.display = "block";
-    img2.style.display = "block";
-  }
-  img1.onmouseout = function (){
-     img2.style.float="none";
-      img2.style.display = "none";
-     slider.style.display = "none";
-  }
-  img1.onmousemove = function(e){
-    var mouseX = e.clientX;
-    var mouseY = e.clientY;
-    var biggerLeft = bigger.offsetLeft;
-    var biggerTop = bigger.offsetTop;
-    var sliderWidth = slider.offsetWidth;
-    var sliderHeight = slider.offsetHeight;
-    console.log(mouseX,mouseY);
-    if(mouseX<130){
-      mouseX=130;
-    }
-     if(mouseX>330){
-      mouseX=330;
-    }
-     if(mouseY<293){
-      mouseY=293;
-    }
-     if(mouseY>490){
-      mouseY=490;
-    }
-    var sliderLeft = mouseX - biggerLeft -sliderWidth/2;
-    var sliderTop = mouseY+100 - biggerTop -sliderHeight/2;
-    slider.style.left = sliderLeft +"px";
-    slider.style.top = sliderTop +"px";
-    if(sliderLeft<=0){
-      //左侧临界值
-      slider.style.left = 0;
-    }
-    else if(sliderLeft>=(img1.offsetWidth-slider.offsetWidth)){
-      //右侧临界值
-      slider.style.left = img1.offsetWidth-slider.offsetWidth + "px";
-    }
-    if(sliderTop<=0){
-      //左侧临界值
-      slider.style.top = 0;
-    }
-    else if(sliderTop>=(img1.offsetHeight-slider.offsetHeight)){
-      //右侧临界值
-      slider.style.top = img1.offsetHeight-slider.offsetHeight + "px";
-    }
 
-    var percent = Bimg.offsetWidth/Simg.offsetWidth;//设定大小比例
-    //大图到左侧的距离是一个负值
-    Bimg.style.left = (-sliderLeft * percent) + "px";
-    Bimg.style.top = (-sliderTop * percent) + "px";
 
-  }
+
+    var imgs = document.getElementById('imgs');
+    var color = document.getElementById('color');
+    for (var i =4; i >= 0; i--) {
+      imgs.children[i].onmouseover=function(){
+        this.style.width="60px";
+        this.style.height="60px";
+        Simg.src=this.src;
+      }
+       imgs.children[i].onmouseout=function(){
+        this.style.width="50px";
+        this.style.height="50px";
+       }
+    }
+    for (var i =11; i >= 0; i--) {
+      color.children[i].onmouseover=function(){
+        this.style.border="1px solid red";
+      }
+     color.children[i].onmouseout=function(){
+        this.style.border="1px solid #ccc";
+      }      
+      color.children[i].onclick=function(){
+        Simg.src=this.src;
+      }
+    }
+      var btn1 = document.getElementById('btn1');
+     var btn2 = document.getElementById('btn2');
+
+  　  btn2.onclick=  function (){
+            //1、获取#num的value
+            var value = document.getElementById("num").value;
+            //2、将取出来的值做+1操作，再赋值给#num的value
+            value = Number(value) + 1;
+            document.getElementById("num").value = value;
+        }
+
+         btn1.onclick=function(){
+            //1、获取#num的值
+            var value = Number(document.getElementById("num").value);
+            //2、判断#num的值是否小于等于1，如果小于等于1的话，则将值改为1
+            //3、否则，可以实现 - 1 操作
+            if(value <= 0){
+                value = 0;
+            }else{
+                value -= 1;
+            }
+            //4、将 value 的值赋值给 #num
+            document.getElementById("num").value = value;
+        }
+        
 </script>
 </html>
