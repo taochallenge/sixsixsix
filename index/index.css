@@ -2,7 +2,7 @@
 * @Author: taochallenge
 * @Date:   2019-12-17 17:58:12
 * @Last Modified by:   taochallenge
-* @Last Modified time: 2019-12-24 20:45:04
+* @Last Modified time: 2019-12-25 17:44:02
 */
 /* 头部部分 */
 *{
@@ -254,7 +254,7 @@ input:focus{
 .hot1{
 	position: absolute;
 	top:135px;
-	left: 875px;
+	left: 867px;
 }
 
 /* 中间部分 */

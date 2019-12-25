@@ -676,9 +676,8 @@ border-top: 1px solid #ccc;
   text-decoration: underline;
 }
 .footer{
-/*  position: absolute;
-  top: 1200px;
-  height: 150px;*/
+  margin-top: 10px;
+  margin-bottom: 80px;
   border-bottom:1px solid #454545;
 }
 .footer div{
@@ -711,18 +710,16 @@ border-top: 1px solid #ccc;
 .true{
 /*  position: relative;
   top: 300px;*/
-  z-index: -1;
   height: 76px;
-  width: 1200px;
   border-top: 4px solid red;
   background-color: rgb(250, 250, 250);
 }
 .true img{
   display: block;
-    width: 1200px;
+  margin-left: 120px;
 }
 #bto{
    margin: 0 auto;
   height: 400px;
-  width: 1200px;
+  text-align: center;
 }
