@@ -75,6 +75,7 @@ for(var i = 0;i < oNavlist.length;i++){
 /********************************************************************/
 var btn3=document.getElementById("btn3");
 var btn2=document.getElementById("btn1");
+var title3=document.getElementsByClassName("title3");
 btn2.onmouseover=function(){
 	this.style.backgroundColor="#ccffff";
 }
@@ -98,8 +99,19 @@ btn3.onmouseout=function(){
 var a=document.getElementsByTagName("a");
 for(var i=0;i<a.length-1;i++){
 	a[i].onclick=function(){
-		this.style.color="#ccffff";
+		this.style.textDecoration="underline";
 	}
+}
+for(var i=0;i<title3.length;i++){
+	title3[i].onmouseover=function(){
+		this.style.backgroundColor="red";
+		this.style.color="#fff";
+	}
+	title3[i].onmouseout=function(){
+		this.style.backgroundColor="#fff";
+		this.style.color="#000";
+	}
+
 }
 
 /**************************************************************************************/
