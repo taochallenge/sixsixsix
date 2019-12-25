@@ -252,3 +252,151 @@ market.onmouseout=function(){
     Bimg.style.left = (-sliderLeft * percent) + "px";
     Bimg.style.top = (-sliderTop * percent) + "px";
   }
+      var imgs = document.getElementById('imgs');
+    var color = document.getElementById('color');
+    var pricechange= document.getElementById('pricechange');
+    var change = document.getElementById('change');
+    var btu11 = document.getElementById('btu11');
+    var btu22 = document.getElementById('btu22');
+    btu11.onmouseover=function(){
+      btu11.src="images/btu11.PNG";
+    }
+    btu22.onmouseover=function(){
+      btu22.src="images/btu22.PNG";
+    }
+    btu11.onmouseout=function(){
+      btu11.src="images/btu1.PNG";
+    }
+    btu22.onmouseout=function(){
+      btu22.src="images/btu2.PNG";
+    }
+    for (var i =4; i >= 0; i--) {
+      imgs.children[i].onmouseover=function(){
+        this.style.width="60px";
+        this.style.height="60px";
+        Simg.src=this.src;
+        Bimg.src=this.src;
+      }
+       imgs.children[i].onmouseout=function(){
+        this.style.width="50px";
+        this.style.height="50px";
+       }
+    }
+    for (var i =11; i >= 0; i--) {
+      color.children[i].onmouseover=function(){
+        this.style.border="1px solid red";
+      }
+     color.children[i].onmouseout=function(){
+        this.style.border="1px solid #ccc";
+      }      
+      color.children[i].onclick=function(){
+        Simg.src=this.src;
+        Bimg.src=this.src;
+        var price=5000+Math.round(Math.random()*100);
+         pricechange.innerHTML= price; 
+      }
+    }
+      var btn1 = document.getElementById('btn1');
+     var btn2 = document.getElementById('btn2');
+
+  　  btn2.onclick=  function (){
+            //1、获取#num的value
+            var value = document.getElementById("num").value;
+            //2、将取出来的值做+1操作，再赋值给#num的value
+            value = Number(value) + 1;
+            document.getElementById("num").value = value;
+        }
+
+         btn1.onclick=function(){
+            //1、获取#num的值
+            var value = Number(document.getElementById("num").value);
+            //2、判断#num的值是否小于等于1，如果小于等于1的话，则将值改为1
+            //3、否则，可以实现 - 1 操作
+            if(value <= 0){
+                value = 0;
+            }else{
+                value -= 1;
+            }
+            //4、将 value 的值赋值给 #num
+            document.getElementById("num").value = value;
+        }
+
+var sliders = document.getElementById('sliders');
+var left = document.getElementById("lefts");
+var right = document.getElementById("rights");
+var slides = document.getElementsByClassName('slides');
+var index = 1;
+
+  //轮播下一张函数
+  function next(){
+    index++;
+    animate(sliders,{left:-900 * index},function(){
+      if(index === 3){
+        sliders.style.left = "-900px";
+        index = 1;
+      }
+    });
+  }
+
+  function prev(){
+    index--;
+    animate(sliders,{left:-900 * index},function(){
+      if(index === 0){
+        sliders.style.left = "-1800px";
+        index = 3;
+      }
+    });
+  }
+
+  var timer = setInterval(next,5000);
+//鼠标滑入清定时器
+boxs.onmouseover = function(){
+  animate(left,{opacity:50})
+  animate(right,{opacity:50})
+  clearInterval(timer);
+}
+//鼠标划出开定时器
+boxs.onmouseout = function(){
+  animate(left,{opacity:0})
+  animate(right,{opacity:0})
+  timer = setInterval(next,5000);
+}
+right.onclick = next;
+left.onclick = prev;
+function getStyle(obj, attr){
+  if(obj.currentStyle){
+    return obj.currentStyle[attr];
+  } else {
+    return getComputedStyle(obj, null)[attr];
+  }
+}
+function animate(obj,json,callback){
+  clearInterval(obj.timer);
+  obj.timer = setInterval(function(){
+    var isStop = true;
+    for(var attr in json){
+      var now = 0;
+      if(attr == 'opacity'){
+        now = parseInt(getStyle(obj,attr)*100);
+      }else{
+        now = parseInt(getStyle(obj,attr));
+      }
+      var speed = (json[attr] - now) / 8;
+      speed = speed>0?Math.ceil(speed):Math.floor(speed);
+      var cur = now + speed;
+      if(attr == 'opacity'){
+        obj.style[attr] = cur / 100;
+      }else{
+        obj.style[attr] = cur + 'px';
+      }
+      // console.log(cur);
+      if(json[attr] !== cur){
+        isStop = false;
+      }
+    }
+    if(isStop){
+      clearInterval(obj.timer);
+      callback&&callback();
+    }
+  }, 30)
+}

@@ -4,146 +4,6 @@
   <meta charset="UTF-8">
 	<title>shopping</title>
   <link rel="stylesheet" href="shopping.css">
-  <style type="text/css">
-    #price1{
-      width: 580px;
-      height: 180px;
-      background:#FFFFF7;
-    }
-    #pricenow{
-      width: 200px;
-      height: 200px;
-      float: left;
-    }
-    #priceimg{
-      width: 320px;
-      height: 200px;
-      float: right;
-    }
-    #pricenow>div{
-      margin-top: 10px;
-      margin-bottom: 10px;
-      height: 20px;
-       width:200px
-    }
-#pricenow>div>p{
-  float: left;
-}
-#pricechange{
-  font-weight: bold;
-  font-size: 200%; 
-  margin-right: 30px;
-}
-#change{
-  padding-top: 10px;
-}
-#price2{
-  height: 30px;
-  width: 580px;
-}
-#price2>p{
-  color: #aaa;
-  margin-left:15px;
-  margin-right: 15px;
-  float: left; 
-}
-#price3{
-  margin-top: 20px;
-  height: 60px;
-  width: 580px;
-  color: #888;
-}
-#price3>p{
-  margin-left:15px;
-  margin-right: 15px;
-  float: left; 
-}
-#price3>div{
-  height: 30px;
-  width: 580px;
-}
-#price3cut>p{
-  width: 50px;
-  margin-left: 15px;
-  float: left;
-}
-#price4{
-    height: 30px;
-  width: 580px;
-  color: #888;
-}
-#price4>div>p{
-  margin-left: 15px;
-  float: left;
-}
-#i{
-width: 50px;
-height: 18px;
-border: 1px solid #000;
-position: relative;
-left: -150px;
-top: 0;
-}
-#price4{
-    height: 30px;
-  width: 580px;
-  color:  #888;
-}
-#price4>div>p{
-  margin-left: 15px;
-  float: left;
-}
-#price5{
-    height: 100px;
-  width: 580px;
-  color:  #888;
-}
-#price5>div>p{
-  margin-left: 15px;
-  float: left;
-}
-#color{
-  width: 500px;
-  height: 150px;
-  float: right;
-}
-#color>img{
-  width: 50px;
-  height: 50px;
-  border:  1px solid #ccc;
-  float: left;
-  margin: 5px;
-}
-#price6{
-width: 500px;
-height: 40px;
-margin-top: 50px;
-
-}
-        #num{
-            box-sizing:border-box;
-            height:40px;
-            width:40px;
-            font-size:10px;
-            text-align:center;
-            vertical-align:bottom;
-            position: relative;
-           left: -80px;
-           border:1px solid #ccc;
-             top: -14px;
-        }
-        #btu3{
-          width: 120px;
-          height: 40px;
-         margin-right: 25px;
-        }
-        #btu4{
-           width: 100px;
-           height: 40px;
-           position: relative;
-            top: -14px;
-        }
- </style>
 </head>
 <body>
     <div id="top-wrap">
@@ -262,6 +122,9 @@ margin-top: 50px;
       <img src="images/img7.PNG">
       <img src="images/img8.PNG">
     </div>
+    <div>
+      <a href="#"><img style="position: relative; top: 400px;" src="images/link.PNG"></a>
+    </div>
     </div>
 	</div>
   <div id="shop">
@@ -273,11 +136,11 @@ margin-top: 50px;
       </div>
       <div id="price1">
         <div id="pricenow">
-          <div><p style="color: #aaa">当当网 </p><a  style="margin-left: 20px"href="#">降价通知</a><br></div>
+          <div><p style="color: #aaa;font-size: 80%">当当网 </p><a  style="margin-left: 20px;font-size: 80%"href="#">降价通知</a><br></div>
           <div style="height: 40px;color: red;"><p style="padding-top: 15px;">¥</p><p id="pricechange">6030</p>
             <p id="change">(5.49折)</p></div>
         </div>
-        <div id="priceimg"><img src="images/img2.PNG"></div>
+        <div id="priceimg"><img style="height: 150px;" src="images/img2.PNG"></div>
       </div>
       <div id="price2"><p style="margin-right: 30px">领     劵</p>
            <a href="#"><img src="images/img10.PNG"></a>
@@ -311,11 +174,11 @@ margin-top: 50px;
           </div>
           </div>
       <div id="price6">
-          <button style=" margin-right: 32px;width: 40px;height:40px " id="btn1">-</button>
+        <button style=" margin-right: 32px;width: 40px;height:40px " id="btn1">-</button>
         <input id="num" value="0">
         <button style="width: 40px ;height: 40px" id="btn2">+</button>
-        <button id="btu3"><img style="width: 120px;height: 40px" src="images/btu1.png"></button>
-        <button id="btu4">立即购买</button>
+        <a class="btu11" href=""><img id="btu11" src="images/btu1.PNG"></a> 
+        <a class="btu22" href=""><img id="btu22" src="images/btu2.PNG"></a>
       </div>
         
       
@@ -340,65 +203,112 @@ margin-top: 50px;
   <div id="title5"><span>联系电话 18015581591</span></div>
   <div id="title6"><button id="btn1">进入店铺<tton><button id="btn2">收藏店铺<tton></div>
   </div>
+   
+
   </div>
+
   </div>
+  <div class="boxs" id="boxs">
+    <p style="color: #0099CC">商品推荐</p>
+      <div class="sliders" id="sliders">
+        <div class="slides">
+          <div class="slide-1">
+            <img src="img/img7.PNG" alt=""><div><span id="sp">￥4200</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img9.PNG" alt=""><div><span id="sp">￥4400</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img9.PNG" alt=""><div><span id="sp">￥5300</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img10.PNG" alt=""><div><span id="sp">￥5100</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img11.PNG" alt=""><div><span id="sp">￥5800</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          
+        </div>
+        <div class="slides">
+          <div class="slide-1">
+            <img src="img/img1.PNG" alt=""><div><span id="sp">￥4660</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img2.PNG" alt=""><div><span id="sp">￥5200</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img3.PNG" alt=""><div><span id="sp">￥4800</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img4.PNG" alt=""><div><span id="sp">￥5210</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img5.PNG" alt=""><div><span id="sp">￥5020</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          
+        </div>
+        <div class="slides">
+          <div class="slide-1">
+            <img src="img/img7.PNG" alt=""><div><span id="sp">￥4200</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img9.PNG" alt=""><div><span id="sp">￥4400</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img9.PNG" alt=""><div><span id="sp">￥5300</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img10.PNG" alt=""><div><span id="sp">￥5100</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img11.PNG" alt=""><div><span id="sp">￥5800</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          
+        </div>
+        <div class="slides" style="position: relative;top: -20px;">
+          <div class="slide-1">
+            <img src="img/img1.PNG" alt=""><div><span id="sp">￥4660</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img2.PNG" alt=""><div><span id="sp">￥5200</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img3.PNG" alt=""><div><span id="sp">￥4800</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img4.PNG" alt=""><div><span id="sp">￥5210</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          <div class="slide-1">
+            <img src="img/img5.PNG" alt=""><div><span id="sp">￥5020</span><a href="#">评论200</a></div><div><span id="a"><a>爱果乐儿童学习桌小学生实木书桌写字课桌椅套装</a></span></div></div>
+          
+        </div>
+      </div>
+      <span id="lefts"><</span>
+      <span id="rights">></span>
+    </div>
+<div id="bto">
+   <div class="true">
+    <img src="images/bottom.png">
+  </div> 
+  <div class="footer">
+    <div><a href="#">新手上路</a></div>
+    <div><a href="#">配送方式</a></div>
+    <div><a href="#">购物指南</a></div>
+    <div><a href="#">售后服务</a></div>
+    <div><a href="#">关于我们</a></div>
+    <div class="size"><a href="#">售后流程</a></div>
+    <div class="size"><a href="#">货到付款区域</a></div>
+    <div class="size"><a href="#">常见问题</a></div>
+    <div class="size"><a href="#">退换货原则</a></div>
+    <div class="size"><a href="#">网站故障报告</a></div>
+    <div class="size"><a href="#">购物流程</a></div>
+    <div class="size"><a href="#">配送支付查询</a></div>
+    <div class="size"><a href="#">订购流程</a></div>
+    <div class="size"><a href="#">售后服务保证</a></div>
+    <div class="size"><a href="#">联系我们</a></div>
+    <div class="size"><a href="#">订购方式</a></div>    
+    <div class="size"><a href="#">支付方式说明</a></div>
+    <div class="size"><a href="#">注册新会员</a></div>
+    <div class="size"><a href="#">换货流程</a></div>
+    <div class="size"><a href="#">投诉与建议</a></div>
+  </div>
+  <div class="copyright">
+    <a href="#">当当生活</a> |
+    <a href="#">诚聘英才</a> |
+    <a href="#">网站联盟</a> |
+    <a href="#">当当招商</a> |
+    <a href="#">手机当当</a> |
+    <a href="#">机构销售</a> |
+    <a href="#">热词搜索</a> |
+    <a href="#">官方BLOG</a><br>
+    <br>
+    <img src="images/biao.png"/>
+    2019-2020 当当网 版权所有，并保留所有权利。ICP备案证书号:京ICP证041189号 出版物经营许可证 
+  </div> 
+   </div>
+
+
   <script type="text/javascript" src="shopping.js"></script>
 </body>
-<script type="text/javascript">
-   var Bimg = document.getElementById('Bimg');
-    var Simg = document.getElementById('Simg');
-
-
-
-
-    var imgs = document.getElementById('imgs');
-    var color = document.getElementById('color');
-    for (var i =4; i >= 0; i--) {
-      imgs.children[i].onmouseover=function(){
-        this.style.width="60px";
-        this.style.height="60px";
-        Simg.src=this.src;
-      }
-       imgs.children[i].onmouseout=function(){
-        this.style.width="50px";
-        this.style.height="50px";
-       }
-    }
-    for (var i =11; i >= 0; i--) {
-      color.children[i].onmouseover=function(){
-        this.style.border="1px solid red";
-      }
-     color.children[i].onmouseout=function(){
-        this.style.border="1px solid #ccc";
-      }      
-      color.children[i].onclick=function(){
-        Simg.src=this.src;
-      }
-    }
-      var btn1 = document.getElementById('btn1');
-     var btn2 = document.getElementById('btn2');
-
-  　  btn2.onclick=  function (){
-            //1、获取#num的value
-            var value = document.getElementById("num").value;
-            //2、将取出来的值做+1操作，再赋值给#num的value
-            value = Number(value) + 1;
-            document.getElementById("num").value = value;
-        }
-
-         btn1.onclick=function(){
-            //1、获取#num的值
-            var value = Number(document.getElementById("num").value);
-            //2、判断#num的值是否小于等于1，如果小于等于1的话，则将值改为1
-            //3、否则，可以实现 - 1 操作
-            if(value <= 0){
-                value = 0;
-            }else{
-                value -= 1;
-            }
-            //4、将 value 的值赋值给 #num
-            document.getElementById("num").value = value;
-        }
-        
-</script>
 </html>
