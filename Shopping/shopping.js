@@ -214,8 +214,8 @@ market.onmouseout=function(){
     var biggerTop = bigger.offsetTop;
     var sliderWidth = slider.offsetWidth;
     var sliderHeight = slider.offsetHeight;
-    var sliderLeft = mouseX - biggerLeft -sliderWidth/2;
-    var sliderTop = mouseY - biggerTop -sliderHeight/2;
+    var sliderLeft =mouseX - biggerLeft -sliderWidth/2;
+    var sliderTop =mouseY - biggerTop -sliderHeight/2;
     if(sliderLeft<0){
       sliderLeft=0;
     }
